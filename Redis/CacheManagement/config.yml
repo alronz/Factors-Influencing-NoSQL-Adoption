@@ -1,0 +1,14 @@
+# when the cache expires , each 10 hours 
+cacheValidityTime: 36000
+server:
+  type: simple
+  rootPath: /api/*
+  applicationContextPath: /
+  connector:
+   type: http
+   port: 8088
+redis:
+# The redis server's address
+  endpoint: $env:JEDIS_URL:127.0.0.1
+swagger:
+  resourcePackage: org.redis.cache.resources

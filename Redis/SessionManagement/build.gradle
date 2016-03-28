@@ -1,0 +1,52 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'eclipse'
+apply plugin: 'docker'
+apply plugin: 'gradle-one-jar'
+
+buildscript {
+    repositories { jcenter() }
+    dependencies {
+        classpath 'se.transmode.gradle:gradle-docker:1.2'
+        classpath 'com.github.rholder:gradle-one-jar:1.0.4'
+    }
+}
+
+// Basic Properties
+sourceCompatibility = 1.7
+targetCompatibility = '1.7'
+
+version = '0.1'
+mainClassName = "org.redis.session.SessionService"
+group = 'RedisExample'
+
+project.ext {
+    dropwizardVersion = '0.8.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile 'io.dropwizard:dropwizard-testing:' + dropwizardVersion
+
+    compile 'io.dropwizard:dropwizard-core:' + dropwizardVersion
+    compile 'io.dropwizard:dropwizard-jdbi:' + dropwizardVersion
+    compile 'io.dropwizard:dropwizard-assets:' + dropwizardVersion
+   // compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'io.federecio:dropwizard-swagger:0.7.0'
+    compile 'redis.clients:jedis:2.8.0'
+    
+
+    compile 'de.thomaskrille.dropwizard:dropwizard-environment-configuration:1.1'
+}
+
+task oneJar(type: OneJar) {
+    mainClass = mainClassName
+}
+
+run {
+    args 'server', 'config.yml'
+}

@@ -1,0 +1,10 @@
+neo4jPath: target/default.graphdb
+server:
+  type: simple
+  rootPath: /api/*
+  applicationContextPath: /
+  connector:
+   type: http
+   port: 8089
+swagger:
+  resourcePackage: org.neo4j.tpcH.resources
