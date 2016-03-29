@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-03-28</lastmod>
+     <lastmod>2016-03-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,7 +13,7 @@
         
     <url>
      <loc>None/Cassandra/Cassandra_Main/</loc>
-     <lastmod>2016-03-28</lastmod>
+     <lastmod>2016-03-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -71,7 +71,7 @@
         
     <url>
      <loc>None/MongoDB/Mongo_Main/</loc>
-     <lastmod>2016-03-28</lastmod>
+     <lastmod>2016-03-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -129,7 +129,7 @@
         
     <url>
      <loc>None/Neo4j/Neo4j_Main/</loc>
-     <lastmod>2016-03-28</lastmod>
+     <lastmod>2016-03-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -184,18 +184,6 @@
     
 
     
-        
-    <url>
-     <loc>None/Redis/Redis_Main/</loc>
-     <lastmod>2016-03-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None</loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
         
     <url>
      <loc>None</loc>
