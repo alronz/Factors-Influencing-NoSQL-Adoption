@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "-\n \nFactors Influencing the Adoption of a NoSQL Solution : A focus on the data modelling and query capabilities.\n \n-\n\n\n-\n \nAn attempt to analysis different NoSQL databases from different NoSQL categories in order to study and test their data modelling capabilities and query expressiveness. Furthermore, many features of each database will be investigated and documented in an easy tutorial-like approach.\n \n-\n\n\n\n\nMotivation\n\n\ncontent comes here.\n\n\nInvestigated databases\n\n\ncontent comes here.\n\n\nData Modelling Testing\n\n\ncontent comes here.\n\n\nQuery Capabilities Testing\n\n\ncontent comes here.\n\n\nData Used\n\n\ncontent comes here.\n\n\nInvestigated NoSQl Databases Comparison\n\n\n\n\nKey-Value Category\n\n\nRedis\n\n\n\n\n\n\nDocument-Based Category\n\n\nMongoDB\n\n\n\n\n\n\nGraph-Based Category\n\n\nNeo4j\n\n\n\n\n\n\nColumn-Based Category\n\n\nCassandra\n\n\n\n\n\n\n\n\nEvaluation\n\n\ncontent comes here.\n\n\nReferences\n\n\ncontent comes here.", 
+            "text": "Factors Influencing the Adoption of a NoSQL Solution : A focus on the data modelling and query capabilities.\n \n\n\nAn attempt to analysis different NoSQL databases from different NoSQL categories in order to study and test their data modelling capabilities and query expressiveness. Furthermore, many features of each database will be investigated and documented in an easy tutorial-like approach.\n \n\n\n\n\nMotivation\n\n\ncontent comes here.\n\n\nNoSQL Database Selection\n\n\ncontent comes here.\n\n\nData Modelling Testing\n\n\ncontent comes here.\n\n\nQuery Capabilities Testing\n\n\ncontent comes here.\n\n\nData Used\n\n\ncontent comes here.\n\n\nResults\n\n\n\n\nKey-Value Category\n\n\nRedis\n\n\n\n\n\n\nDocument-Based Category\n\n\nMongoDB\n\n\n\n\n\n\nGraph-Based Category\n\n\nNeo4j\n\n\n\n\n\n\nColumn-Based Category\n\n\nCassandra\n\n\n\n\n\n\n\n\nEvaluation\n\n\ncontent comes here.\n\n\nReferences\n\n\ncontent comes here.", 
             "title": "Home"
         }, 
         {
@@ -11,9 +11,9 @@
             "title": "Motivation"
         }, 
         {
-            "location": "/#investigated-databases", 
+            "location": "/#nosql-database-selection", 
             "text": "content comes here.", 
-            "title": "Investigated databases"
+            "title": "NoSQL Database Selection"
         }, 
         {
             "location": "/#data-modelling-testing", 
@@ -31,9 +31,9 @@
             "title": "Data Used"
         }, 
         {
-            "location": "/#investigated-nosql-databases-comparison", 
+            "location": "/#results", 
             "text": "Key-Value Category  Redis    Document-Based Category  MongoDB    Graph-Based Category  Neo4j    Column-Based Category  Cassandra", 
-            "title": "Investigated NoSQl Databases Comparison"
+            "title": "Results"
         }, 
         {
             "location": "/#evaluation", 
