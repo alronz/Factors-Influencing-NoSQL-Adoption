@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Bilal Al-Saeedi">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+	<title>TPC-H Queries - NoSQL Adoption Influencing Factors</title>
+
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../..">NoSQL Adoption Influencing Factors</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Redis <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../Redis/Redis/">Content</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Basics</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Redis/Basics/Overview/">Overview</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Basics/Installation/">Installation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Basics/Underline Structure/">Underline Structure</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Basics/Possible Use Cases/">Possible Use Cases</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Basics/Query Language/">Query Language</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Basics/Transaction Support/">Transaction Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Basics/Data Import and Export/">Data Import and Export</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Data Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Redis/Data Model/Data Layout/">Data Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Data Model/Relational Data Support/">Relational Data Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Data Model/Normalization or Denormalization/">Normalization or Denormalization</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Data Model/Nested Data Structures/">Nested Data Structures</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Data Model/Referential Integrity/">Referential Integrity</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Query Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Redis/Query Model/Query Options/">Query Options</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Query Model/Full Text Search Support/">Full Text Search Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Query Model/Regular Expressions Support/">Regular Expressions Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Query Model/Aggregation and Filtering/">Aggregation and Filtering</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Query Model/Indexing/">Indexing</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Query Model/Sorting/">Sorting</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Administration and Maintenance</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Redis/Administration and Maintenance/Configuration/">Configuration</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Administration and Maintenance/Scalability/">Scalability</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Administration and Maintenance/Persistency/">Persistency</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Administration and Maintenance/Backup/">Backup</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Administration and Maintenance/Upgrading/">Upgrading</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Administration and Maintenance/Security/">Security</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Administration and Maintenance/Availability/">Availability</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Special Features</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Redis/Special Features/Scripting Support/">Scripting Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Special Features/Pub and Sub Support/">Pub and Sub Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Special Features/Expire Option/">Expire Option</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Special Features/Redis as a Cache/">Redis as a Cache</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Examples</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Cart Management Service/">Cart Management Service</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Session Management Service/">Session Management Service]</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Cache Service/">Cache Service</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Analytics Service/">Analytics Service</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Job Queue System/">Job Queue System</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Handling Relational Data/">Handling Relational Data</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Bulk Transactions Support/">Bulk Transactions Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Transaction Support/">Transaction Support</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Results</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Redis/Results/Strengths and Weaknesses/">Strengths and Weaknesses</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Results/Summary/">Summary</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">MongoDB <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../MongoDB/MongoDB/">Content</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Basics</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../MongoDB/Basics/Overview/">Overview</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Basics/Installation/">Installation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Basics/Underline Structure/">Underline Structure</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Basics/Possible Use Cases/">Possible Use Cases</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Basics/Query Language/">Query Language</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Basics/Transaction Support/">Transaction Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Basics/Data Import and Export/">Data Import and Export</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Data Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../MongoDB/Data Model/Data Layout/">Data Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Data Model/Relational Data Support/">Relational Data Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Data Model/Normalization or Denormalization/">Normalization or Denormalization</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Data Model/Nested Data Structures/">Nested Data Structures</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Data Model/Referential Integrity/">Referential Integrity</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Query Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../MongoDB/Query Model/Query Options/">Query Options</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Query Model/Full Text Search Support/">Full Text Search Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Query Model/Regular Expressions Support/">Regular Expressions Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Query Model/Aggregation and Filtering/">Aggregation and Filtering</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Query Model/Indexing/">Indexing</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Query Model/Sorting/">Sorting</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Administration and Maintenance</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../MongoDB/Administration and Maintenance/Configuration/">Configuration</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Administration and Maintenance/Scalability/">Scalability</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Administration and Maintenance/Persistency/">Persistency</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Administration and Maintenance/Backup/">Backup</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Administration and Maintenance/Upgrading/">Upgrading</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Administration and Maintenance/Security/">Security</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Administration and Maintenance/Availability/">Availability</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Special Features</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../MongoDB/Special Features/GridFS/">GridFS</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Special Features/Document Validation/">Document Validation</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Examples</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../MongoDB/Examples/TPC-H Queries/">TPC-H Queries</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Results</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../MongoDB/Results/Strengths and Weaknesses/">Strengths and Weaknesses</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Results/Summary/">Summary</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Neo4j <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../Neo4j/Neo4j/">Content</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Basics</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Neo4j/Basics/Overview/">Overview</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Basics/Installation/">Installation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Basics/Underline Structure/">Underline Structure</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Basics/Possible Use Cases/">Possible Use Cases</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Basics/Query Language/">Query Language</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Basics/Transaction Support/">Transaction Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Basics/Data Import and Export/">Data Import and Export</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Data Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Neo4j/Data Model/Data Layout/">Data Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Data Model/Relational Data Support/">Relational Data Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Data Model/Normalization or Denormalization/">Normalization or Denormalization</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Data Model/Nested Data Structures/">Nested Data Structures</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Data Model/Referential Integrity/">Referential Integrity</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Query Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Neo4j/Query Model/Query Options/">Query Options</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Query Model/Full Text Search Support/">Full Text Search Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Query Model/Regular Expressions Support/">Regular Expressions Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Query Model/Aggregation and Filtering/">Aggregation and Filtering</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Query Model/Indexing/">Indexing</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Query Model/Sorting/">Sorting</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Administration and Maintenance</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Neo4j/Administration and Maintenance/Configuration/">Configuration</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Administration and Maintenance/Scalability/">Scalability</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Administration and Maintenance/Persistency/">Persistency</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Administration and Maintenance/Backup/">Backup</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Administration and Maintenance/Upgrading/">Upgrading</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Administration and Maintenance/Security/">Security</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Administration and Maintenance/Availability/">Availability</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Examples</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Neo4j/Examples/TPC-H Queries/">TPC-H Queries</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Results</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Neo4j/Results/Strengths and Weaknesses/">Strengths and Weaknesses</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Results/Summary/">Summary</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cassandra <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../Cassandra/">Content</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Basics</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Basics/Overview/">Overview</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Basics/Installation/">Installation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Basics/Underline Structure/">Underline Structure</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Basics/Possible Use Cases/">Possible Use Cases</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Basics/Query Language/">Query Language</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Basics/Transaction Support/">Transaction Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Basics/Data Import and Export/">Data Import and Export</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Data Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Data Model/Data Layout/">Data Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Data Model/Relational Data Support/">Relational Data Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Data Model/Normalization or Denormalization/">Normalization or Denormalization</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Data Model/Nested Data Structures/">Nested Data Structures</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Data Model/Referential Integrity/">Referential Integrity</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Query Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Query Model/Query Options/">Query Options</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Query Model/Full Text Search Support/">Full Text Search Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Query Model/Regular Expressions Support/">Regular Expressions Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Query Model/Aggregation and Filtering/">Aggregation and Filtering</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Query Model/Indexing/">Indexing</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Query Model/Sorting/">Sorting</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Administration and Maintenance</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Administration and Maintenance/Configuration/">Configuration</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Administration and Maintenance/Scalability/">Scalability</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Administration and Maintenance/Persistency/">Persistency</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Administration and Maintenance/Backup/">Backup</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Administration and Maintenance/Upgrading/">Upgrading</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Administration and Maintenance/Security/">Security</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Administration and Maintenance/Availability/">Availability</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Examples</a>
+    <ul class="dropdown-menu">
+        
+            
+<li class="active">
+    <a href="./">TPC-H Queries</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Results</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Results/Strengths and Weaknesses/">Strengths and Weaknesses</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Results/Summary/">Summary</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../../Administration and Maintenance/Availability/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../Results/Strengths and Weaknesses/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/alronz/NoSQL-Selection-Factors">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#cassandra-examples-tpc-h-queries">Cassandra &gt; Examples &gt; TPC-H Queries</a></li>
+        
+            <li><a href="#pricing-summary-report-query-q1">Pricing Summary Report Query (Q1)</a></li>
+        
+            <li><a href="#shipping-priority-query-q3">Shipping Priority Query (Q3)</a></li>
+        
+            <li><a href="#order-priority-checking-query-q4">Order Priority Checking Query (Q4)</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><a href="../../..">Home</a></p>
+<p><a href="../../Cassandra/">Cassandra Content</a></p>
+<hr />
+<h1 id="cassandra-examples-tpc-h-queries">Cassandra &gt; Examples &gt; TPC-H Queries</h1>
+<p>In this example, I will show how we can model the data of a complete B2C application and how to write complex queries on this data model. I am going to use the data model used by the <a href="http://www.tpc.org/tpch">TPC-H benchmark</a> which is shown below.</p>
+<p><img alt="image" src="https://s3.amazonaws.com/b2cbucket/tpch_schema.png" /></p>
+<p>The idea behind this example is to show how to use Cassandra to design a real B2C application data model and how to write advance SQL queries with joins, grouping and sorting using Cassandra query language (CQL). I have chosen three queries from the TPCH benchmark that I think will cover most of the common query capabilities of SQL. The chosen queries are Q1, Q3 and Q4 as will be explained in the following sections.</p>
+<p>The data used as input for this example is a small set from the data generated using TPCH DBGEN tool. The data is stored in CSV files that correspond to each object in the TPCH benchmark schema shown above (customer, supplier, part, lineitem, order , etc ...). For more details about how to generate the data, please have a look at <a href="http://kejser.org/tpc-h-data-and-query-generation/">this</a> blog post. </p>
+<p>The complete code of this example can be found in Github along with the steps on how to run it. You can also change the used input data by changing the content of the <a href="https://github.com/alronz/B2C-Database-Selection-Implementations/tree/master/Cassandra/CassandraTPCHQueries/src/main/java/org/cassandra/tpcH/data">input files</a> stored in the "data" folder.</p>
+<h5 id="pricing-summary-report-query-q1">Pricing Summary Report Query (Q1)</h5>
+<p>This query is used to report the amount of billed, shipped and returned items. The SQL query is shown below:</p>
+<pre><code>select
+   l_returnflag,
+   l_linestatus,
+   sum(l_quantity) as sum_qty,
+   sum(l_extendedprice) as sum_base_price,
+   sum(l_extendedprice*(1-l_discount)) as sum_disc_price,
+   sum(l_extendedprice*(1-l_discount)*(1+l_tax)) as sum_charge,
+   avg(l_quantity) as avg_qty,
+   avg(l_extendedprice) as avg_price,
+   avg(l_discount) as avg_disc,
+   count(*) as count_order
+from
+   lineitem
+where
+   l_shipdate &lt;= date '1998-12-01' - interval '[DELTA]' day (3)
+group by
+   l_returnflag,
+   l_linestatus
+order by
+   l_returnflag,
+   l_linestatus;
+</code></pre>
+
+<p>As explained previously in the <a href="../Data Modeling/data_layout.md">data layout section</a>, writes are cheap in Cassandra and it is absolutely ok to duplicate your data. We also model our data around the query patterns that we are planning to have in our application and not around the entities or relationships of the data model. This means that if we are going to frequently run the above query in our application, then it make sense to create a separate table for it to get better performance and to allow the data to scale efficiently. </p>
+<p>Ofcourse first we will create the Keyspace that will hold the tables as seen below:</p>
+<pre><code>CREATE KEYSPACE IF NOT EXISTS CASSANDRA_EXAMPLE_KEYSPACE WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};
+</code></pre>
+
+<p>Then we will create a Cassandra table that will be used to serve the above query using as shown below:</p>
+<pre><code>CREATE TABLE IF NOT EXISTS CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q1 
+(
+orderkey text,
+linestatus text,
+returnflag text,
+quantity double,
+extendedprice double,
+discount double,
+tax double,
+shipdate timestamp,
+PRIMARY KEY ((returnflag,linestatus),shipdate,orderkey,linenumber)
+);
+</code></pre>
+
+<p>The most important thing that you need to consider very carefully before creating CQL tables is the primary key. The primary key can be a single key, a composite key or a compound key and based on the primary key the data will be written to the partitions. If you use a primary key that is not unique, the data will be overwritten. This means you should always ensure that the primary key is unique to avoid overwriting your data. The primary key contains also the partition key which could be a single key or a composite key. The partition key defines how the data will be distributed across the different nodes, which means we should choose partition keys that allows for equal data distribution across the nodes and not creating what is called a hot spot in one of the partitions. A hot spot is created when the data is distributed unequally among the partitions where one of the partitions contains most of the data and hence receives most of the read and write requests. Additionally, Cassandra support only two billion columns per partition and after this limit it will reject the write requests. If you also choose a partition key that is too high (too unique),  then each partition will have very little data which will negate the benefits of the wide row data model and you will have too little data in each partition that worth ordering. For all these reasons, it is quite important that we choose a unique primary key to prevent data from overwriting and a good partition key that is not too high or too low so that it will allow for a good data distribution across the cluster. </p>
+<p>From the above SQL query (TPCH Q1), we have to perform aggregate functions such as sum, avg and count on the data inside the lineitem table grouped by the returnflag, and the linestatus. In Cassandra aggregates are always performed in the partition level, this means that the data will always be grouped by the partition key. Hence we will have to make sure that the linestatus and returnflag are part of the composite key that will make the partition key. However if we use only returnflag and linestatus as the primary key, then the data will be overwritten in each partition since they are not unique. For example, we could have multiple rows in the lineitem table having the same linestatus and returnflag. So we add the orderkey and the linenumber as clustering columns to the primary key to form a compound key which will make the primary key unique and will prevent overwriting the data. So the primary key is ((returnflag,linestatus),orderkey,linenumber). And since we want to filter results using the shipdate, then it would be a good idea to include the shipdate column in the compound key as clustering column. So now our compound primary key is  ((returnflag,linestatus),shipdate,orderkey,linenumber). The shipdate should be the first clustering column since we want to run range queries against it. If you put the shipdate as the second clustering column, then if you want to run range queries on it you would need first to specify the value of the first clustering column using either '=' or 'IN'.  The partition key (returnflag,linestatus) is good for data distribution since each partition will contain the data of a specific returnflag and linestatus.</p>
+<p>Now after creating the table we need to load it with data. This is done using the below function:</p>
+<pre><code>private void loadTpchQ1() {
+
+        File file = new File(&quot;src/main/java/org/cassandra/tpcH/data/lineitem.txt&quot;);
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String line;
+
+            while ((line = br.readLine()) != null) {
+                String[] lineFields = line.split(Pattern.quote(&quot;|&quot;));
+
+                LOGGER.info(line.toString());
+
+                String insertStatement = &quot;INSERT INTO CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q1 (orderkey,linenumber,linestatus,returnflag,quantity,&quot; +
+                        &quot;extendedprice,discount,tax,shipdate) VALUES&quot; +
+                        &quot; ('&quot; + lineFields[0] +
+                        &quot;','&quot; + lineFields[3] +
+                        &quot;','&quot; + lineFields[9] +
+                        &quot;','&quot; + lineFields[8] +
+                        &quot;',&quot; + Double.valueOf(lineFields[4]) +
+                        &quot;,&quot; + Double.valueOf(lineFields[5]) +
+                        &quot;,&quot; + Double.valueOf(lineFields[6]) +
+                        &quot;,&quot; + Double.valueOf(lineFields[7]) +
+                        &quot;,'&quot; + lineFields[10] + &quot;') IF NOT EXISTS;&quot;;
+
+                LOGGER.info(insertStatement);
+
+                session.execute(insertStatement);
+            }
+
+
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+}
+</code></pre>
+
+<p>After loading the data, now if we run a "select * from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q1;" statement we will see the below:</p>
+<p><img alt="image" src="https://s3.amazonaws.com/b2cbucket/q1screenshot1.png" /></p>
+<p>As mentioned in a <a href="../Search Data/queryOptions.md">previous sections</a>, Cassandra supports some built in aggregate functions such as sum, avg, min, max and count. However if you want to perform some mathematical operations within the SELECT statement, you will have to create a separate user defined function for that. As seen in the SQL query, we need to perform the below mathematical operations in the SELECT statement:</p>
+<pre><code>sum(l_extendedprice*(1-l_discount)) as sum_disc_price
+// And
+sum(l_extendedprice*(1-l_discount)*(1+l_tax)) as sum_charge
+</code></pre>
+
+<p>For that we need to create two user defined functions as shown below:</p>
+<pre><code>CREATE OR REPLACE FUNCTION  CASSANDRA_EXAMPLE_KEYSPACE.fSumDiscPrice (l_extendedprice double,l_discount double) CALLED ON NULL INPUT RETURNS double LANGUAGE java AS 'return (Double.valueOf( l_extendedprice.doubleValue() *  (1.0 - l_discount.doubleValue() ) ));
+</code></pre>
+
+<pre><code>CREATE OR REPLACE FUNCTION CASSANDRA_EXAMPLE_KEYSPACE.fSumChargePrice (l_extendedprice double,l_discount double,l_tax double) CALLED ON NULL INPUT RETURNS double LANGUAGE java AS 'return (Double.valueOf( l_extendedprice.doubleValue() *  (1.0 - l_discount.doubleValue() ) * (1.0 + l_tax.doubleValue()) ));';
+</code></pre>
+
+<p>After creating the Keyspace, the CQL table, loaded the table with data ,  and created the two user defined functions fSumDiscPrice and fSumChargePrice, we can run a CQL SELECT query as shown below:</p>
+<pre><code>SELECT 
+ returnflag,
+ linestatus, 
+ sum(quantity) as sum_qty,
+ sum(extendedprice) as sum_base_price,
+ sum(CASSANDRA_EXAMPLE_KEYSPACE.fSumDiscPrice(extendedprice,discount)) as sum_disc_price,
+ sum(CASSANDRA_EXAMPLE_KEYSPACE.fSumChargePrice(extendedprice,discount,tax)) as sum_charge, 
+ avg(quantity) as avg_qty, avg(extendedprice) as avg_price, 
+ avg(discount) as avg_disc, 
+ count(*) as count_order 
+FROM 
+ CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q1 
+WHERE 
+ shipdate &lt; '2000-01-01 22:00:00-0700'  
+ and returnflag='N' 
+ and linestatus = 'O' ;
+</code></pre>
+
+<p>Notice that we have specified the partition key values (returnflag and linestatus) which not what we want on the original query. We had to specify the partition key values since if you don't, Cassandra will aggregate the results across all the partitions in the cluster and gives wrong results beside it will be very slow. If you don't specify the partition key values, you will get a warning from Cassandra as shown below:</p>
+<p><img alt="image" src="https://s3.amazonaws.com/b2cbucket/q1screenshot3.png" /></p>
+<p>But this is not useful since we want to aggregate across the whole data in all the partition to get some kind of overall analytic report and not for each partition separately. To overcome this challenge, you can get the partition key values across all partitions using the below query :</p>
+<pre><code>select distinct  returnflag, linestatus from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q1 ;
+</code></pre>
+
+<p>For our example data, you will get only one row as shown below, but for different data you might get more than one row:</p>
+<p><img alt="image" src="https://s3.amazonaws.com/b2cbucket/q1screenshot4.png" /></p>
+<p>Then you can iterate through the results and run the CQL aggregate query shown above for each partition keys as shown below in the java code sinppest:</p>
+<pre><code>
+String getAllPartitionKeyValues = &quot;select distinct  returnflag, linestatus from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q1 ;&quot;;
+
+ResultSet rsAllPartitionKey = this.model.executeStatement(getAllPartitionKeyValues);
+
+// get aggregate function per partition
+for (Row row : rsAllPartitionKey.all()) {
+
+String q1Statement = &quot;SELECT returnflag, linestatus, sum(quantity) as sum_qty,sum(extendedprice) as sum_base_price, sum(CASSANDRA_EXAMPLE_KEYSPACE.fSumDiscPrice(extendedprice,discount)) as sum_disc_price\n&quot; +                       &quot;, sum(CASSANDRA_EXAMPLE_KEYSPACE.fSumChargePrice(extendedprice,discount,tax)) as sum_charge, avg(quantity) as avg_qty,\n&quot; + 
+&quot;avg(extendedprice) as avg_price, avg(discount) as avg_disc, count(*) as count_order \n&quot; +
+&quot;FROM CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q1 WHERE shipdate &lt; '2000-01-01 22:00:00-0700'  and returnflag = '&quot; + row.getString(&quot;returnflag&quot;) + &quot;' and linestatus = '&quot; + row.getString(&quot;linestatus&quot;) + &quot;' ALLOW FILTERING ; &quot;;
+
+ResultSet rsQ1 = this.model.executeStatement(q1Statement);
+
+for (Row innerRow : rsQ1.all())
+   rowsResult.add(innerRow);
+}
+
+</code></pre>
+
+<p>You might be wondering about the "order by" clause in the SQL query. Unfortunately, you can't group and order by the same columns in Cassandra. Grouping in Cassandra is done using the partition key while ordering happens inside each partition using what is called the clustering columns. To put it simple, you can't group by a column (use it as a partition key) and then order by the same column using the ORDER BY clause since you can order by only a clustering column. Although there is a way to order cluster by the partition keys using the Byte Ordered Partitioner (BOP), however it is discouraged because it can lead to hot spots and load balancing problems.</p>
+<p>The complete java code for the api that will return the results of TPCH Q1 is shown below:</p>
+<pre><code>@GET
+    @Path(&quot;/q1&quot;)
+    @Timed
+    @ApiOperation(value = &quot;get result of TPCH Q1 using this model&quot;, notes = &quot;Returns String&quot;, response = String.class)
+    @ApiResponses(value = {@ApiResponse(code = 500, message = &quot;internal server error !&quot;)})
+    public String getQ1Results() {
+
+
+        try {
+
+            this.model.connect();
+
+            ArrayList&lt;Row&gt; rowsResult = new ArrayList&lt;Row&gt;();
+
+            String createIndexOnCommitDate = &quot;CREATE INDEX IF NOT EXISTS shipdate_index ON CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q1 (shipdate)&quot;;
+
+            this.model.executeStatement(createIndexOnCommitDate);
+
+
+            String getAllPartitionKeyValues = &quot;select distinct  returnflag, linestatus from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q1 ;&quot;;
+
+
+            ResultSet rsAllPartitionKey = this.model.executeStatement(getAllPartitionKeyValues);
+
+            // get aggregate function per partition
+            for (Row row : rsAllPartitionKey.all()) {
+
+                String q1Statement = &quot;SELECT returnflag, linestatus, sum(quantity) as sum_qty,sum(extendedprice) as sum_base_price, sum(CASSANDRA_EXAMPLE_KEYSPACE.fSumDiscPrice(extendedprice,discount)) as sum_disc_price\n&quot; +
+                        &quot;, sum(CASSANDRA_EXAMPLE_KEYSPACE.fSumChargePrice(extendedprice,discount,tax)) as sum_charge, avg(quantity) as avg_qty,\n&quot; +
+                        &quot;avg(extendedprice) as avg_price, avg(discount) as avg_disc, count(*) as count_order \n&quot; +
+                        &quot;FROM CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q1 WHERE shipdate &lt; '2000-01-01 22:00:00-0700'  and returnflag = '&quot; + row.getString(&quot;returnflag&quot;) + &quot;' and linestatus = '&quot; + row.getString(&quot;linestatus&quot;) + &quot;' ALLOW FILTERING ; &quot;;
+                ResultSet rsQ1 = this.model.executeStatement(q1Statement);
+
+                for (Row innerRow : rsQ1.all())
+                    rowsResult.add(innerRow);
+            }
+
+
+            this.model.close();
+
+            return rowsResult.toString();
+        } catch (Exception e) {
+            LOGGER.log(Level.SEVERE,
+                    &quot;internal server error !&quot; + e.getLocalizedMessage());
+            final String shortReason = &quot;internal server error !&quot;;
+            Exception cause = new IllegalArgumentException(shortReason);
+            throw new WebApplicationException(cause,
+                    javax.ws.rs.core.Response.Status.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+
+</code></pre>
+
+<h5 id="shipping-priority-query-q3">Shipping Priority Query (Q3)</h5>
+<p>This query is used to get the 10 unshipped orders with the highest value. In order to do that, the query joins three tables (customer, order and lineitem) as shown below:</p>
+<pre><code>select
+ l_orderkey,
+ sum(l_extendedprice*(1-l_discount)) as revenue,
+ o_orderdate,
+ o_shippriority
+from
+ customer,
+ orders,
+ lineitem
+where
+ c_mktsegment = '[SEGMENT]'
+ and c_custkey = o_custkey
+ and l_orderkey = o_orderkey
+ and o_orderdate &lt; date '[DATE]'
+ and l_shipdate &gt; date '[DATE]'
+group by
+ l_orderkey,
+ o_orderdate,
+ o_shippriority
+order by
+ revenue desc,
+ o_orderdate;
+</code></pre>
+
+<p>Since joins aren't supported in Cassandra, we create a CQL table that has all the needed values from the different tables since duplicating your data is ok in Cassandra as mentioned in the <a href="../Data Modeling/data_layout.md">data layout section</a>. We create the table as shown below:</p>
+<pre><code> CREATE TABLE IF NOT EXISTS CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3
+(
+orderkey text,
+linenumber text,
+o_orderdate timestamp,
+o_shippriority text,
+c_mktsegment text,
+l_extendedprice double,
+l_discount double,
+l_shipdate timestamp,
+PRIMARY KEY ((orderkey,o_orderdate,o_shippriority),c_mktsegment,l_shipdate,linenumber)
+);
+</code></pre>
+
+<p>Similar to what we have done in Q1, we have chosen the partition key to be the columns that we are going to group with as shown in the SQL query (l_orderkey,o_orderdate,o_shippriority). This will let us run aggregate functions on them since the aggregate functions are run in partition level in Cassandra. Then we have added the linenumber to the compound primary key so that the primary key is unique and to avoid overwriting. I have added the c_mktsegment and the l_shipdate as clustering columns to the compound primary key since we need to query against them. If you don't want to use it as a clustering column, you can also create a separate secondary indexes for the columns you want to filter with. </p>
+<p>Now we need to load the table with data as shown below:</p>
+<pre><code>
+private void loadTpchQ3() {
+
+        File file = new File(&quot;src/main/java/org/cassandra/tpcH/data/order.txt&quot;);
+
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String line;
+
+            while ((line = br.readLine()) != null) {
+                String[] lineFields = line.split(Pattern.quote(&quot;|&quot;));
+
+                // get c_mktsegment based on the custkey
+                String c_mktsegment = null;
+
+                File customerFile = new File(&quot;src/main/java/org/cassandra/tpcH/data/customer.txt&quot;);
+                String customerLine;
+                BufferedReader customerBr = new BufferedReader(new FileReader(customerFile));
+
+                while ((customerLine = customerBr.readLine()) != null) {
+                    String[] customerLineFields = customerLine.split(Pattern.quote(&quot;|&quot;));
+
+                    if (lineFields[1].equals(customerLineFields[0])) {
+                        c_mktsegment = customerLineFields[6];
+                    }
+                }
+
+
+                File lineItems = new File(&quot;src/main/java/org/cassandra/tpcH/data/lineitem.txt&quot;);
+                String lineItemLine;
+                BufferedReader lineItemBr = new BufferedReader(new FileReader(lineItems));
+
+                while ((lineItemLine = lineItemBr.readLine()) != null) {
+                    String[] lineItemLineFields = lineItemLine.split(Pattern.quote(&quot;|&quot;));
+
+                    if (lineItemLineFields[0].equals(lineFields[0])) {
+
+                        String insertStatement = &quot;INSERT INTO CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3 (orderkey,linenumber,o_orderdate,o_shippriority,&quot; +
+                                &quot;c_mktsegment,l_extendedprice,l_discount,l_shipdate) VALUES&quot; +
+                                &quot; ('&quot; + lineFields[0] +
+                                &quot;','&quot; + lineItemLineFields[3] +
+                                &quot;','&quot; + lineFields[4] +
+                                &quot;','&quot; + lineFields[5] +
+                                &quot;','&quot; + c_mktsegment +
+                                &quot;',&quot; + Double.valueOf(lineItemLineFields[5]) +
+                                &quot;,&quot; + Double.valueOf(lineItemLineFields[6]) +
+                                &quot;,'&quot; + lineItemLineFields[10] + &quot;') IF NOT EXISTS&quot;;
+
+                        ResultSet rs = session.execute(insertStatement);
+                        LOGGER.info(rs.toString());
+                    }
+                }
+            }
+
+
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+
+</code></pre>
+
+<p>After the data is loaded in the table. If you run a "select * from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3;", you will get the below:</p>
+<p><img alt="image" src="https://s3.amazonaws.com/b2cbucket/q3screenshot1.png" /></p>
+<p>Now after we have created the table and loaded it with date, we can run aggregate query like the SQL version as shown below:</p>
+<pre><code>SELECT orderkey,sum(CASSANDRA_EXAMPLE_KEYSPACE.fSumDiscPrice(l_extendedprice,l_discount)) as revenue, o_orderdate,l_shipdate, o_shippriority,linenumber from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3
+ where orderkey= 'somekey'  and o_orderdate = 'somedate' and o_shippriority='somepriority'  and c_mktsegment='Segement' and l_shipdate &gt; '1990-01-01';
+</code></pre>
+
+<p>As you can see, we have specified the partition key values since it is necessary to get correct aggregated results. However we can run it across all partitions by retrieving all the partition values and then iterate through them to run the above query in each partition as shown below:</p>
+<pre><code>
+String getAllPartitionKeyValues = &quot;select distinct  orderkey, o_orderdate,o_shippriority from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3 ;&quot;;
+
+
+            ResultSet rsAllPartitionKey = this.model.executeStatement(getAllPartitionKeyValues);
+
+
+            // get aggregate function per partition
+            for (Row row : rsAllPartitionKey.all()) {
+                String q3TempStatement = &quot;SELECT orderkey,sum(CASSANDRA_EXAMPLE_KEYSPACE.fSumDiscPrice(l_extendedprice,l_discount)) as revenue, o_orderdate,l_shipdate, o_shippriority,linenumber from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3\n&quot; +
+                        &quot; where orderkey= '&quot; + row.getString(&quot;orderkey&quot;) + &quot;'  and o_orderdate = '&quot; + formatter.format(row.getTimestamp(&quot;o_orderdate&quot;)) + &quot;' and o_shippriority='&quot; + row.getString(&quot;o_shippriority&quot;) + &quot;'  and c_mktsegment='AUTOMOBILE' and l_shipdate &gt; '1990-01-01' ;&quot;;
+
+
+                ResultSet rsQ3Temp = this.model.executeStatement(q3TempStatement);
+
+
+                if (rsQ3Temp != null) {
+
+                    for (Row innerRow : rsQ3Temp.all()) {
+
+                        if (innerRow != null &amp;&amp; !innerRow.isNull(&quot;orderkey&quot;)) {
+
+                        for (Row innerRow : rsQ1.all())
+                              rowsResult.add(innerRow);
+
+                        }
+                    }
+                }
+            }
+
+</code></pre>
+
+<p>As you can see from the SQL query, the results are sorted by the revenue which is a field that was created using an aggregate function during the SELECT statement. Unfortunately this is not easily done in Cassandra. The sorting columns (clustering columns) are defined during the table creation and not during the SELECT statement. One idea to solve this, is to create a Materialised View that will be created using a SELECT statement and then use the newly created column (revenue) to be the clustering column of the created Materialised View. However unfortunately Cassandra doesn't support user defined functions on the Materialised View that would be needed to create the revenue field ( sum(l_extendedprice*(1-l_discount)) as revenue). Another idea I used to overcome this challenge is by creating a temporary table to store the intermediate aggregate results, then query this table and finally delete it once finished. The temporary table has the below structure:</p>
+<pre><code>CREATE TABLE IF NOT EXISTS CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3_TEMP
+orderkey text,
+revenue double,
+o_orderdate timestamp,
+o_shippriority text,
+PRIMARY KEY (orderkey,revenue,o_orderdate) 
+)WITH CLUSTERING ORDER BY (revenue DESC, o_orderdate ASC);
+</code></pre>
+
+<p>As you can see, it has a simple partition key (orderkey) as it would contain only the results of the aggregate query. The revenue and o_orderdate are the clustering columns used for sorting. I have also specified the sorting order using the WITH CLUSTERING ORDER BY clause. </p>
+<p>Now you can load it with results of the aggregate query of each partition as show below:</p>
+<pre><code>
+String getAllPartitionKeyValues = &quot;select distinct  orderkey, o_orderdate,o_shippriority from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3 ;&quot;;
+
+
+            ResultSet rsAllPartitionKey = this.model.executeStatement(getAllPartitionKeyValues);
+
+
+            // get aggregate function per partition
+            for (Row row : rsAllPartitionKey.all()) {
+                String q3TempStatement = &quot;SELECT orderkey,sum(CASSANDRA_EXAMPLE_KEYSPACE.fSumDiscPrice(l_extendedprice,l_discount)) as revenue, o_orderdate,l_shipdate, o_shippriority,linenumber from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3\n&quot; +
+                        &quot; where orderkey= '&quot; + row.getString(&quot;orderkey&quot;) + &quot;'  and o_orderdate = '&quot; + formatter.format(row.getTimestamp(&quot;o_orderdate&quot;)) + &quot;' and o_shippriority='&quot; + row.getString(&quot;o_shippriority&quot;) + &quot;'  and c_mktsegment='AUTOMOBILE' and l_shipdate &gt; '1990-01-01' ;&quot;;
+
+
+                ResultSet rsQ3Temp = this.model.executeStatement(q3TempStatement);
+
+
+                if (rsQ3Temp != null) {
+
+                    for (Row innerRow : rsQ3Temp.all()) {
+
+                        if (innerRow != null &amp;&amp; !innerRow.isNull(&quot;orderkey&quot;)) {
+
+                            String insertStatement = &quot;INSERT INTO CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3_TEMP (orderkey,revenue,o_orderdate,&quot; +
+                                    &quot;o_shippriority) VALUES&quot; +
+                                    &quot; ('&quot; + innerRow.getString(&quot;orderkey&quot;) +
+                                    &quot;',&quot; + Double.valueOf(innerRow.getDouble(&quot;revenue&quot;)) +
+                                    &quot;,'&quot; + formatter.format(innerRow.getTimestamp(&quot;o_orderdate&quot;)) +
+                                    &quot;','&quot; + innerRow.getString(&quot;o_shippriority&quot;) + &quot;') IF NOT EXISTS;&quot;;
+
+                            this.model.executeStatement(insertStatement);
+
+                            LOGGER.info(&quot;insert executed&quot;);
+                        }
+                    }
+                }
+            }
+
+</code></pre>
+
+<p>Then you can run queries against this temporary table as below:</p>
+<pre><code>SELECT * from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3_TEMP ;
+</code></pre>
+
+<p>Notice that we don't use any ORDER BY clause since it will be sorted by the order specified when we created the table.  We get the results as shown below:</p>
+<p><img alt="image" src="https://s3.amazonaws.com/b2cbucket/q3screenshot2.png" /></p>
+<p>The complete api function used to retrieve Q3 is shown below:</p>
+<pre><code>    @GET
+    @Path(&quot;/q3&quot;)
+    @Timed
+    @ApiOperation(value = &quot;get result of TPCH Q3 using this model&quot;, notes = &quot;Returns String&quot;, response = String.class)
+    @ApiResponses(value = {@ApiResponse(code = 500, message = &quot;internal server error !&quot;)})
+    public String getQ2Results() {
+
+
+        try {
+
+            String tpchQ3TempTable = &quot; CREATE TABLE IF NOT EXISTS CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3_TEMP\n&quot; +
+                    &quot; (\n&quot; +
+                    &quot; orderkey text,\n&quot; +
+                    &quot; revenue double,\n&quot; +
+                    &quot; o_orderdate timestamp,\n&quot; +
+                    &quot; o_shippriority text,\n&quot; +
+                    &quot; PRIMARY KEY (orderkey,revenue,o_orderdate) \n&quot; +
+                    &quot; )WITH CLUSTERING ORDER BY (revenue DESC, o_orderdate ASC);&quot;;
+
+
+            this.model.connect();
+            this.model.executeStatement(tpchQ3TempTable);
+
+            String getAllPartitionKeyValues = &quot;select distinct  orderkey, o_orderdate,o_shippriority from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3 ;&quot;;
+
+
+            ResultSet rsAllPartitionKey = this.model.executeStatement(getAllPartitionKeyValues);
+
+
+            // get aggregate function per partition
+            for (Row row : rsAllPartitionKey.all()) {
+                String q3TempStatement = &quot;SELECT orderkey,sum(CASSANDRA_EXAMPLE_KEYSPACE.fSumDiscPrice(l_extendedprice,l_discount)) as revenue, o_orderdate,l_shipdate, o_shippriority,linenumber from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3\n&quot; +
+                        &quot; where orderkey= '&quot; + row.getString(&quot;orderkey&quot;) + &quot;'  and o_orderdate = '&quot; + formatter.format(row.getTimestamp(&quot;o_orderdate&quot;)) + &quot;' and o_shippriority='&quot; + row.getString(&quot;o_shippriority&quot;) + &quot;'  and c_mktsegment='AUTOMOBILE' and l_shipdate &gt; '1990-01-01' ;&quot;;
+
+
+                ResultSet rsQ3Temp = this.model.executeStatement(q3TempStatement);
+
+
+                if (rsQ3Temp != null) {
+
+                    for (Row innerRow : rsQ3Temp.all()) {
+
+                        if (innerRow != null &amp;&amp; !innerRow.isNull(&quot;orderkey&quot;)) {
+
+                            String insertStatement = &quot;INSERT INTO CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3_TEMP (orderkey,revenue,o_orderdate,&quot; +
+                                    &quot;o_shippriority) VALUES&quot; +
+                                    &quot; ('&quot; + innerRow.getString(&quot;orderkey&quot;) +
+                                    &quot;',&quot; + Double.valueOf(innerRow.getDouble(&quot;revenue&quot;)) +
+                                    &quot;,'&quot; + formatter.format(innerRow.getTimestamp(&quot;o_orderdate&quot;)) +
+                                    &quot;','&quot; + innerRow.getString(&quot;o_shippriority&quot;) + &quot;') IF NOT EXISTS;&quot;;
+
+                            this.model.executeStatement(insertStatement);
+
+                            LOGGER.info(&quot;insert executed&quot;);
+                        }
+                    }
+                }
+            }
+
+
+            String q3FinalStatement = &quot;SELECT * from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3_TEMP ; &quot;;
+
+
+            ResultSet rsQ3 = this.model.executeStatement(q3FinalStatement);
+
+            String dropQ3TempTable = &quot;DROP TABLE CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q3_TEMP;&quot;;
+
+            ResultSet rsQ3DropMV = this.model.executeStatement(dropQ3TempTable);
+            LOGGER.info(rsQ3DropMV.toString());
+
+            this.model.close();
+
+            return rsQ3.all().toString();
+        } catch (Exception e) {
+            LOGGER.log(Level.SEVERE,
+                    &quot;internal server error !&quot; + e.getLocalizedMessage());
+            final String shortReason = &quot;internal server error !&quot;;
+            Exception cause = new IllegalArgumentException(shortReason);
+            throw new WebApplicationException(cause,
+                    javax.ws.rs.core.Response.Status.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+</code></pre>
+
+<h5 id="order-priority-checking-query-q4">Order Priority Checking Query (Q4)</h5>
+<p>This query is used to see how well the order priority system is working and gives indication of the customer satisfaction. The SQL query is shown below:</p>
+<pre><code>select
+ o_orderpriority,
+ count(*) as order_count
+from
+ orders
+where
+ o_orderdate &gt;= date '[DATE]'
+ and o_orderdate &lt; date '[DATE]' + interval '3' month
+ and exists (
+select
+ *
+from
+ lineitem
+where
+ l_orderkey = o_orderkey
+ and l_commitdate &lt; l_receiptdate
+)
+group by
+ o_orderpriority
+order by
+ o_orderpriority;
+</code></pre>
+
+<p>In a similar way like we have done in Q1 and Q3 , we create a new CQL table that will be used to serve the above query. The table is shown below:</p>
+<pre><code>CREATE TABLE CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q4
+(
+orderkey text,
+linenumber text,
+o_orderpriority text,
+o_orderdate timestamp,
+l_receiptdate timestamp,
+l_commitdate timestamp,
+PRIMARY KEY (o_orderpriority,o_orderdate,orderkey,linenumber)
+)
+</code></pre>
+
+<p>We have used the primary key to be a combination of o_orderpriority, o_orderdate, orderkey, and linenumber to ensure the uniqueness of the inserted data in each partition. The o_orderpriority is the partition key since it is the group by column in the original SQL query. And as explained before, aggregation in Cassandra is done in the partition level so we have to use the o_orderpriority as the partition key. Note that we have used o_orderdate as the first clustering column so that we can run range queries on it. However we will have to create a secondary index for the l_commitdate since we can't have two clustering columns and still be able to run range queries on both of them. Hence I have created a secondary index on the l_commitdate as shown below:</p>
+<pre><code>CREATE INDEX IF NOT EXISTS l_commitdate_index_on_TPCH_Q4 ON CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q4 (l_commitdate);
+</code></pre>
+
+<p>Then we load the table with data using the below method:</p>
+<pre><code>private void loadTpchQ4() {
+
+        File file = new File(&quot;src/main/java/org/cassandra/tpcH/data/order.txt&quot;);
+
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String line;
+
+            while ((line = br.readLine()) != null) {
+                String[] lineFields = line.split(Pattern.quote(&quot;|&quot;));
+
+                File lineItems = new File(&quot;src/main/java/org/cassandra/tpcH/data/lineitem.txt&quot;);
+                String lineItemLine;
+                BufferedReader lineItemBr = new BufferedReader(new FileReader(lineItems));
+
+                while ((lineItemLine = lineItemBr.readLine()) != null) {
+                    String[] lineItemLineFields = lineItemLine.split(Pattern.quote(&quot;|&quot;));
+
+                    if (lineItemLineFields[0].equals(lineFields[0])) {
+
+                        String insertStatement = &quot;INSERT INTO CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q4 (linenumber,orderkey,o_orderpriority,o_orderdate,l_receiptdate,&quot; +
+                                &quot;l_commitdate) VALUES&quot; +
+                                &quot; ('&quot; + lineItemLineFields[3] +
+                                &quot;','&quot; + lineFields[0] +
+                                &quot;','&quot; + lineFields[5] +
+                                &quot;','&quot; + lineFields[4] +
+                                &quot;','&quot; + lineItemLineFields[12] +
+                                &quot;','&quot; + lineItemLineFields[11] + &quot;') IF NOT EXISTS&quot;;
+
+                        ResultSet rs = session.execute(insertStatement);
+                        LOGGER.info(rs.toString());
+                    }
+                }
+            }
+
+
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+
+</code></pre>
+
+<p>After loading the data, if you run a "SELECT * from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q4;" you will get the below results:</p>
+<p><img alt="image" src="https://s3.amazonaws.com/b2cbucket/q4screenshot1.png" /></p>
+<p>Now we can run an aggregate query against our table but first we need to get all the partition keys. Then we can run the query against each partition as we have done in Q1 and Q3 as shown below:</p>
+<pre><code>
+String getAllPartitionKeyValues = &quot;select distinct  o_orderpriority from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q4 ;&quot;;
+
+
+            ResultSet rsAllPartitionKey = this.model.executeStatement(getAllPartitionKeyValues);
+
+            // get aggregate function per partition
+            for (Row row : rsAllPartitionKey.all()) {
+
+                String q4Statement = &quot;SELECT o_orderpriority, count(*) as order_count from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q4 \n&quot; +
+                        &quot;where  o_orderpriority ='&quot; + row.getString(&quot;o_orderpriority&quot;) + &quot;' and o_orderdate &gt;=  '1990-01-01' and o_orderdate &lt; '2000-01-01' and l_commitdate &lt; '2000-01-01' ALLOW FILTERING &quot;;
+
+
+                ResultSet rsQ4 = this.model.executeStatement(q4Statement);
+
+                for (Row innerRow : rsQ4.all())
+                    rowsResult.add(innerRow);
+            }
+
+</code></pre>
+
+<p>You can notice that I couldn't run the SQL condition ( and l_commitdate &lt; l_receiptdate) in Cassandra since it isn't supported and you will get the below error:</p>
+<pre><code>[Syntax error in CQL query] message=&quot;line 1:253 no viable alternative at input ';' (...&lt; '2000-01-01' and l_commitdate &lt; [l_receiptdate] ;)”&gt;\
+</code></pre>
+
+<p>Cassandra doesn't support having a condition of a column compared to another column within the same table. So I had to use a normal static value (and l_commitdate &lt; '2000-01-01') which not what the original query require. </p>
+<p>Finally, similar to the first query Q1 you can't order by the same column that you are grouping by. So I couldn't order the results by the o_orderpriority as in the original query since this column is the partition key and can't be used as a culturing column. </p>
+<p>Based on our data, the result of the query is as shown below:</p>
+<pre><code>[Row[1-URGENT, 1], Row[5-LOW, 4]]
+</code></pre>
+
+<p>The complete api function that will get the results of Q4 is shown below:</p>
+<pre><code>
+    @GET
+    @Path(&quot;/q4&quot;)
+    @Timed
+    @ApiOperation(value = &quot;get result of TPCH Q4 using this model&quot;, notes = &quot;Returns String&quot;, response = String.class)
+    @ApiResponses(value = {@ApiResponse(code = 500, message = &quot;internal server error !&quot;)})
+    public String getQ3Results() {
+
+        try {
+
+            String createIndexOnCommitDate = &quot;CREATE INDEX IF NOT EXISTS l_commitdate_index_on_TPCH_Q4 ON CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q4 (l_commitdate);&quot;;
+
+            this.model.connect();
+
+            ArrayList&lt;Row&gt; rowsResult = new ArrayList&lt;Row&gt;();
+
+
+            String getAllPartitionKeyValues = &quot;select distinct  o_orderpriority from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q4 ;&quot;;
+
+
+            ResultSet rsAllPartitionKey = this.model.executeStatement(getAllPartitionKeyValues);
+
+            // get aggregate function per partition
+            for (Row row : rsAllPartitionKey.all()) {
+
+                String q4Statement = &quot;SELECT o_orderpriority, count(*) as order_count from CASSANDRA_EXAMPLE_KEYSPACE.TPCH_Q4 \n&quot; +
+                        &quot;where  o_orderpriority ='&quot; + row.getString(&quot;o_orderpriority&quot;) + &quot;' and o_orderdate &gt;=  '1990-01-01' and o_orderdate &lt; '2000-01-01' and l_commitdate &lt; '2000-01-01' ALLOW FILTERING &quot;;
+
+
+                ResultSet rsQ4 = this.model.executeStatement(q4Statement);
+
+                for (Row innerRow : rsQ4.all())
+                    rowsResult.add(innerRow);
+            }
+
+
+            this.model.executeStatement(createIndexOnCommitDate);
+
+            this.model.close();
+
+            return rowsResult.toString();
+        } catch (Exception e) {
+            LOGGER.log(Level.SEVERE,
+                    &quot;internal server error !&quot; + e.getLocalizedMessage());
+            final String shortReason = &quot;internal server error !&quot;;
+            Exception cause = new IllegalArgumentException(shortReason);
+            throw new WebApplicationException(cause,
+                    javax.ws.rs.core.Response.Status.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+</code></pre></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <p>Copyright © 2016 <a href="https://sa.linkedin.com/in/bilal-al-saeedi-4b185a18">Bilal Al-Saeedi </a></p>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../../js/highlight.pack.js"></script>
+        <script>var base_url = '../../..';</script>
+        <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script>
+        <script src="../../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
