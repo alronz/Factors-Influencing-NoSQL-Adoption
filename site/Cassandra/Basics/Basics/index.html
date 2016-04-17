@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Bilal Al-Saeedi">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+	<title>Main - Factors Influencing NoSQL Adoption</title>
+
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../..">Factors Influencing NoSQL Adoption</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Redis <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../Redis/Redis/">Main</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Basics</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Redis/Basics/Basics/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Basics/Overview/">Overview</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Basics/Installation/">Installation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Basics/Underline Structure/">Underline Structure</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Basics/Possible Use Cases/">Possible Use Cases</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Basics/Query Language/">Query Language</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Basics/Transaction Support/">Transaction Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Basics/Data Import and Export/">Data Import and Export</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Data Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Redis/Data Model/Data Model/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Data Model/Data Layout/">Data Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Data Model/Relational Data Support/">Relational Data Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Data Model/Normalization or Denormalization/">Normalization or Denormalization</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Data Model/Nested Data Structures/">Nested Data Structures</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Data Model/Referential Integrity/">Referential Integrity</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Query Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Redis/Query Model/Query Model/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Query Model/Query Options/">Query Options</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Query Model/Full Text Search Support/">Full Text Search Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Query Model/Regular Expressions Support/">Regular Expressions Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Query Model/Aggregation and Filtering/">Aggregation and Filtering</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Query Model/Indexing/">Indexing</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Query Model/Sorting/">Sorting</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Administration and Maintenance</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Redis/Administration and Maintenance/Administration and Maintenance/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Administration and Maintenance/Configuration/">Configuration</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Administration and Maintenance/Scalability/">Scalability</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Administration and Maintenance/Persistency/">Persistency</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Administration and Maintenance/Backup/">Backup</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Administration and Maintenance/Upgrading/">Upgrading</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Administration and Maintenance/Security/">Security</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Administration and Maintenance/Availability/">Availability</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Special Features</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Redis/Special Features/Special Features/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Special Features/Scripting Support/">Scripting Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Special Features/Pub and Sub Support/">Pub and Sub Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Special Features/Expire Option/">Expire Option</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Special Features/Redis as a Cache/">Redis as a Cache</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Examples</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Examples/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Cart Management Service/">Cart Management Service</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Session Management Service/">Session Management Service]</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Cache Service/">Cache Service</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Analytics Service/">Analytics Service</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Job Queue System/">Job Queue System</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Handling Relational Data/">Handling Relational Data</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Bulk Transactions Support/">Bulk Transactions Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Examples/Transaction Support/">Transaction Support</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Results</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Redis/Results/Results/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Results/Strengths and Weaknesses/">Strengths and Weaknesses</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Redis/Results/Summary/">Summary</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">MongoDB <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../MongoDB/MongoDB/">Main</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Basics</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../MongoDB/Basics/Basics/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Basics/Overview/">Overview</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Basics/Installation/">Installation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Basics/Underline Structure/">Underline Structure</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Basics/Possible Use Cases/">Possible Use Cases</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Basics/Query Language/">Query Language</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Basics/Transaction Support/">Transaction Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Basics/Data Import and Export/">Data Import and Export</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Data Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../MongoDB/Data Model/Data Model/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Data Model/Data Layout/">Data Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Data Model/Relational Data Support/">Relational Data Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Data Model/Normalization or Denormalization/">Normalization or Denormalization</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Data Model/Nested Data Structures/">Nested Data Structures</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Data Model/Referential Integrity/">Referential Integrity</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Query Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../MongoDB/Query Model/Query Model/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Query Model/Query Options/">Query Options</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Query Model/Full Text Search Support/">Full Text Search Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Query Model/Regular Expressions Support/">Regular Expressions Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Query Model/Aggregation and Filtering/">Aggregation and Filtering</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Query Model/Indexing/">Indexing</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Query Model/Sorting/">Sorting</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Administration and Maintenance</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../MongoDB/Administration and Maintenance/Administration and Maintenance/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Administration and Maintenance/Configuration/">Configuration</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Administration and Maintenance/Scalability/">Scalability</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Administration and Maintenance/Persistency/">Persistency</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Administration and Maintenance/Backup/">Backup</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Administration and Maintenance/Upgrading/">Upgrading</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Administration and Maintenance/Security/">Security</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Administration and Maintenance/Availability/">Availability</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Special Features</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../MongoDB/Special Features/Special Features/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Special Features/GridFS/">GridFS</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Special Features/Document Validation/">Document Validation</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Examples</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../MongoDB/Examples/Examples/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Examples/TPC-H Queries/">TPC-H Queries</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Examples/Denormalised Model/">Denormalised Model</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Examples/Normalized Model/">Normalized Model</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Examples/Mixed Model/">Mixed Model</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Results</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../MongoDB/Results/Results/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Results/Strengths and Weaknesses/">Strengths and Weaknesses</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../MongoDB/Results/Summary/">Summary</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Neo4j <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../Neo4j/Neo4j/">Main</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Basics</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Neo4j/Basics/Basics/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Basics/Overview/">Overview</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Basics/Installation/">Installation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Basics/Underline Structure/">Underline Structure</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Basics/Possible Use Cases/">Possible Use Cases</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Basics/Query Language/">Query Language</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Basics/Transaction Support/">Transaction Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Basics/Data Import and Export/">Data Import and Export</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Data Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Neo4j/Data Model/Data Model/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Data Model/Data Layout/">Data Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Data Model/Relational Data Support/">Relational Data Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Data Model/Normalization or Denormalization/">Normalization or Denormalization</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Data Model/Nested Data Structures/">Nested Data Structures</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Data Model/Referential Integrity/">Referential Integrity</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Query Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Neo4j/Query Model/Query Model/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Query Model/Query Options/">Query Options</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Query Model/Full Text Search Support/">Full Text Search Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Query Model/Regular Expressions Support/">Regular Expressions Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Query Model/Aggregation and Filtering/">Aggregation and Filtering</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Query Model/Indexing/">Indexing</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Query Model/Sorting/">Sorting</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Administration and Maintenance</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Neo4j/Administration and Maintenance/Administration and Maintenance/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Administration and Maintenance/Configuration/">Configuration</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Administration and Maintenance/Scalability/">Scalability</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Administration and Maintenance/Persistency/">Persistency</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Administration and Maintenance/Backup/">Backup</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Administration and Maintenance/Upgrading/">Upgrading</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Administration and Maintenance/Security/">Security</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Administration and Maintenance/Availability/">Availability</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Examples</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Neo4j/Examples/Examples/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Examples/TPC-H Queries/">TPC-H Queries</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Results</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Neo4j/Results/Results/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Results/Strengths and Weaknesses/">Strengths and Weaknesses</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Neo4j/Results/Summary/">Summary</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cassandra <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../Cassandra/">Content</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Basics</a>
+    <ul class="dropdown-menu">
+        
+            
+<li class="active">
+    <a href="./">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../Overview/">Overview</a>
+</li>
+
+        
+            
+<li >
+    <a href="../Installation/">Installation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../Underline Structure/">Underline Structure</a>
+</li>
+
+        
+            
+<li >
+    <a href="../Possible Use Cases/">Possible Use Cases</a>
+</li>
+
+        
+            
+<li >
+    <a href="../Query Language/">Query Language</a>
+</li>
+
+        
+            
+<li >
+    <a href="../Transaction Support/">Transaction Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../Data Import and Export/">Data Import and Export</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Data Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Data Model/Data Model/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Data Model/Data Layout/">Data Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Data Model/Relational Data Support/">Relational Data Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Data Model/Normalization or Denormalization/">Normalization or Denormalization</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Data Model/Nested Data Structures/">Nested Data Structures</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Data Model/Referential Integrity/">Referential Integrity</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Query Model</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Query Model/Query Model/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Query Model/Query Options/">Query Options</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Query Model/Full Text Search Support/">Full Text Search Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Query Model/Regular Expressions Support/">Regular Expressions Support</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Query Model/Aggregation and Filtering/">Aggregation and Filtering</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Query Model/Indexing/">Indexing</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Query Model/Sorting/">Sorting</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Administration and Maintenance</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Administration and Maintenance/Administration and Maintenance/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Administration and Maintenance/Configuration/">Configuration</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Administration and Maintenance/Scalability/">Scalability</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Administration and Maintenance/Persistency/">Persistency</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Administration and Maintenance/Backup/">Backup</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Administration and Maintenance/Upgrading/">Upgrading</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Administration and Maintenance/Security/">Security</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Administration and Maintenance/Availability/">Availability</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Examples</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Examples/Examples/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Examples/TPC-H Queries/">TPC-H Queries</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Results</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Results/Results/">Main</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Results/Strengths and Weaknesses/">Strengths and Weaknesses</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Results/Summary/">Summary</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../../Cassandra/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../Overview/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="http://alronz.github.io/Factors-Influencing-NoSQL-Adoption">
+                            
+                            Alronz
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#cassandra-basics">Cassandra &gt; Basics</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h3 id="cassandra-basics"><a href="../../Cassandra/">Cassandra</a> &gt; Basics</h3>
+<hr />
+<ul>
+<li>Basics<ul>
+<li><a href="../Overview/">Overview</a></li>
+<li><a href="../Installation/">Installation</a></li>
+<li><a href="../Underline Structure/">Underline Structure</a></li>
+<li><a href="../Possible Use Cases/">Possible Use Cases</a></li>
+<li><a href="../Query Language/">Query Language</a></li>
+<li><a href="../Transaction Support/">Transaction Support</a></li>
+<li><a href="../Data Import and Export/">Data Import and Export</a></li>
+</ul>
+</li>
+</ul></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <p>Copyright © 2016 <a href="https://sa.linkedin.com/in/bilal-al-saeedi-4b185a18">Bilal Al-Saeedi </a></p>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../../js/highlight.pack.js"></script>
+        <script>var base_url = '../../..';</script>
+        <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script>
+        <script src="../../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
