@@ -11,134 +11,26 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Factors Influencing the Adoption of a NoSQL Solution:  A focus on the data modelling and query capabilities.</h1>
-      <h2 class="project-tagline">An attempt to analysis different NoSQL databases from different NoSQL categories in order to study their data modelling and query capabilities. In the process, many features of each database will be investigated and documented in an easy tutorial-like approach where possible. Based on the results of the analysis, the strengths and weaknesses of each database as well as the factors that influence the adoption of a NoSQL solution will be presented. </h2>
+      <h1 class="project-name">Factors Influencing the Adoption of a NoSQL Solution</h1>
+      <h2 class="project-tagline">An attempt to analysis different NoSQL databases from different NoSQL categories in order to study their data modelling and query capabilities. In the process, many features of each database will be investigated and documented in an easy tutorial-like approach. Based on the results of the analysis, the databases strengths, weaknesses as well as the factors influencing the NoSQL adoption are presented. </h2>
       <a href="https://github.com/alronz/NoSQL-Selection-Factors" class="btn">View on GitHub</a>
       <a href="https://github.com/alronz/NoSQL-Selection-Factors/zipball/master" class="btn">Download .zip</a>
       <a href="site/index.html" class="btn">Documentations</a>
     </section>
 
     <section class="main-content">
-      <p>This project was created to show how to use NoSQL databases such as Redis, MongoDB, Neo4j and Cassandra to implement a real life data model of a B2C application and try to check how is the query expressiveness for each database.  The data model used for this experiment is the <a href="http://www.tpc.org/tpch/">TPCH benchmark</a> data model shown below:</p>
+      <p>For the past few decades, relational databases have been the default choice for data storage, especially for enterprise applications. Currently, many other database technologies are grabbing more attention due to their high performance, scalability, and
+availability options, such as Not Only SQL (NoSQL) technologies. Choosing the right database technology for applications among a plethora of database options is a challenging task.</p>
+      <p>In this website, I aim to provide a systematic and experimental evaluation for four NoSQL databases across spectrum of different NoSQL categories. The investigated
+databases are Redis, MongoDB, Neo4j, and Cassandra. I study multiple aspects
+such as the database transaction support, query options, data layout, scalability,
+availability, security, and durability. Besides, I analyze the data modelling of each
+database using a data model from the <a href="http://www.tpc.org/tpch/default.asp">Transaction Processing Council Ad-hoc (TPC-H) benchmark </a>. Furthermore, I evaluate the query capabilities of each database
+using three complex queries from the same benchmark. Based on the examination,
+I capture the strengths and weaknesses each database has. Finally, I present a
+set of factors that influence the adoption of a NoSQL solution. I hope that these factors can assist software architects and developers to choose the proper database technology for their specific application needs. </p>
 
-<p><img src="https://s3.amazonaws.com/b2cbucket/tpch_schema.png" alt="image"></p>
 
-<p>To check the query expressiveness for each database, three SQL queries have been chosen from the same benchmark (TPCH) which are shown below:</p>
-
-<h5>
-<a id="pricing-summary-report-query-q1" class="anchor" href="#pricing-summary-report-query-q1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pricing Summary Report Query (Q1)</h5>
-
-<p>This query is used to report the amount of billed, shipped and returned items. The SQL query is shown below:</p>
-
-<div class="highlight highlight-source-sql"><pre><span class="pl-k">select</span>
-   l_returnflag,
-   l_linestatus,
-   <span class="pl-c1">sum</span>(l_quantity) <span class="pl-k">as</span> sum_qty,
-   <span class="pl-c1">sum</span>(l_extendedprice) <span class="pl-k">as</span> sum_base_price,
-   <span class="pl-c1">sum</span>(l_extendedprice<span class="pl-k">*</span>(<span class="pl-c1">1</span><span class="pl-k">-</span>l_discount)) <span class="pl-k">as</span> sum_disc_price,
-   <span class="pl-c1">sum</span>(l_extendedprice<span class="pl-k">*</span>(<span class="pl-c1">1</span><span class="pl-k">-</span>l_discount)<span class="pl-k">*</span>(<span class="pl-c1">1</span><span class="pl-k">+</span>l_tax)) <span class="pl-k">as</span> sum_charge,
-   <span class="pl-c1">avg</span>(l_quantity) <span class="pl-k">as</span> avg_qty,
-   <span class="pl-c1">avg</span>(l_extendedprice) <span class="pl-k">as</span> avg_price,
-   <span class="pl-c1">avg</span>(l_discount) <span class="pl-k">as</span> avg_disc,
-   <span class="pl-c1">count</span>(<span class="pl-k">*</span>) <span class="pl-k">as</span> count_order
-<span class="pl-k">from</span>
-   lineitem
-<span class="pl-k">where</span>
-   l_shipdate <span class="pl-k">&lt;=</span> <span class="pl-k">date</span> <span class="pl-s"><span class="pl-pds">'</span>1998-12-01<span class="pl-pds">'</span></span> <span class="pl-k">-</span> interval <span class="pl-s"><span class="pl-pds">'</span>[DELTA]<span class="pl-pds">'</span></span> day (<span class="pl-c1">3</span>)
-<span class="pl-k">group by</span>
-   l_returnflag,
-   l_linestatus
-<span class="pl-k">order by</span>
-   l_returnflag,
-   l_linestatus;</pre></div>
-
-<p>This query was selected to show how aggregation with mathematical operations, sorting and filtering is supported in the investigated NoSQL databases.</p>
-
-<h5>
-<a id="shipping-priority-query-q3" class="anchor" href="#shipping-priority-query-q3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shipping Priority Query (Q3)</h5>
-
-<p>This query is used to get the 10 unshipped orders with the highest value. In order to do that, the query joins three tables (customer, order and lineitem) as shown below:</p>
-
-<div class="highlight highlight-source-sql"><pre><span class="pl-k">select</span>
- l_orderkey,
- <span class="pl-c1">sum</span>(l_extendedprice<span class="pl-k">*</span>(<span class="pl-c1">1</span><span class="pl-k">-</span>l_discount)) <span class="pl-k">as</span> revenue,
- o_orderdate,
- o_shippriority
-<span class="pl-k">from</span>
- customer,
- orders,
- lineitem
-<span class="pl-k">where</span>
- c_mktsegment <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>[SEGMENT]<span class="pl-pds">'</span></span>
- <span class="pl-k">and</span> c_custkey <span class="pl-k">=</span> o_custkey
- <span class="pl-k">and</span> l_orderkey <span class="pl-k">=</span> o_orderkey
- <span class="pl-k">and</span> o_orderdate <span class="pl-k">&lt;</span> <span class="pl-k">date</span> <span class="pl-s"><span class="pl-pds">'</span>[DATE]<span class="pl-pds">'</span></span>
- <span class="pl-k">and</span> l_shipdate <span class="pl-k">&gt;</span> <span class="pl-k">date</span> <span class="pl-s"><span class="pl-pds">'</span>[DATE]<span class="pl-pds">'</span></span>
-<span class="pl-k">group by</span>
- l_orderkey,
- o_orderdate,
- o_shippriority
-<span class="pl-k">order by</span>
- revenue <span class="pl-k">desc</span>,
- o_orderdate;</pre></div>
-
-<p>This query is selected, to investigate how querying related data is supported in the investigated databases.</p>
-
-<h5>
-<a id="order-priority-checking-query-q4" class="anchor" href="#order-priority-checking-query-q4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Order Priority Checking Query (Q4)</h5>
-
-<p>This query is used to see how well the order priority system is working and gives indication of the customer satisfaction. The SQL query is shown below:</p>
-
-<div class="highlight highlight-source-sql"><pre><span class="pl-k">select</span>
- o_orderpriority,
- <span class="pl-c1">count</span>(<span class="pl-k">*</span>) <span class="pl-k">as</span> order_count
-<span class="pl-k">from</span>
- orders
-<span class="pl-k">where</span>
- o_orderdate <span class="pl-k">&gt;=</span> <span class="pl-k">date</span> <span class="pl-s"><span class="pl-pds">'</span>[DATE]<span class="pl-pds">'</span></span>
- <span class="pl-k">and</span> o_orderdate <span class="pl-k">&lt;</span> <span class="pl-k">date</span> <span class="pl-s"><span class="pl-pds">'</span>[DATE]<span class="pl-pds">'</span></span> <span class="pl-k">+</span> interval <span class="pl-s"><span class="pl-pds">'</span>3<span class="pl-pds">'</span></span> month
- <span class="pl-k">and</span> exists (
-<span class="pl-k">select</span>
- <span class="pl-k">*</span>
-<span class="pl-k">from</span>
- lineitem
-<span class="pl-k">where</span>
- l_orderkey <span class="pl-k">=</span> o_orderkey
- <span class="pl-k">and</span> l_commitdate <span class="pl-k">&lt;</span> l_receiptdate
-)
-<span class="pl-k">group by</span>
- o_orderpriority
-<span class="pl-k">order by</span>
- o_orderpriority;</pre></div>
-
-<p>This query is chosen, to check how subqueries are supported in the investigated databases.</p>
-
-<h5>
-<a id="project-structure" class="anchor" href="#project-structure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project structure</h5>
-
-<p>This project was created as separate projects for each database where each project can be run alone as a service and each query is built like an API that can be called to test the code. For example for the Cassandra database, you can find the project under "Cassandra/CassandraTPCHQueries/" and for MongoDB the project is under the path "MongoDB/TPCHQueries/" and so forth.</p>
-
-<h5>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h5>
-
-<p>The data used as input for the projects of each database is a small set from the data generated using TPCH DBGEN tool. The data is stored in CSV files that correspond to each object in the TPCH benchmark schema shown above (customer, supplier, part, lineitem, order , etc ...). For more details about how to generate the data, please have a look at <a href="http://kejser.org/tpc-h-data-and-query-generation/">this</a> blog post.  You can change the used input data by changing the content of the input files that are located under the "data" folder. For example, the input files for Cassandra are located in the path (Cassandra/CassandraTPCHQueries/src/main/java/org/cassandra/tpcH/data).</p>
-
-<p>To test the projects, you can use run the individual projects for each database and use swagger UI to call the APIs for each query. For example, you can run the (Cassandra/CassandraTPCHQueries/) project by running the following:</p>
-
-<pre><code>gradle run
-</code></pre>
-
-<p>Then you can find the swagger ui in the following path:</p>
-
-<pre><code>http://localhost:{port}/api/swagger
-</code></pre>
-
-<h5>
-<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h5>
-
-<p>For each database example project, I have created a detailed explanation of the project that can be found in the documentation for the each database under the example folder.  For example, Cassandra project "Cassandra/CassandraTPCHQueries/" documentation can be found in the path (Cassandra/Examples/tpch.md).</p>
-
-<p>Beside the explanation for the projects, you can find brief documentation for most  of the features in each database folder.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/alronz/NoSQL-Selection-Factors">Nosql-selection-factors</a> is maintained by <a href="https://github.com/alronz">alronz</a>.</span>
