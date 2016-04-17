@@ -1143,7 +1143,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#mongodb-administration-and-maintenance-scalability">MongoDB &gt; Administration and Maintenance &gt; Scalability</a></li>
+        <li class="main active"><a href="#mongodb-administration-and-maintenance-scalability">MongoDB  &gt; Administration and Maintenance &gt; Scalability</a></li>
         
             <li><a href="#query-routers">Query Routers</a></li>
         
@@ -1160,10 +1160,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../MongoDB/">MongoDB Content</a></p>
+<h3 id="mongodb-administration-and-maintenance-scalability"><a href="../../MongoDB/">MongoDB </a> &gt; <a href="../Administration and Maintenance.md">Administration and Maintenance</a> &gt; Scalability</h3>
 <hr />
-<h1 id="mongodb-administration-and-maintenance-scalability">MongoDB &gt; Administration and Maintenance &gt; Scalability</h1>
 <p>As your data grows, your sever won't be able to handle the high rate of queries and the larger sets will exceed the server storage capacity. To address these issues, you will have to do either a vertical or horizontal scaling. You can scale your server vertically by adding more CPUs and storage resources but there is always a limit to what you can add to a single server machine. In the other hand, you can scale horizontally by distributing your data over multiple servers which is also called Sharding. Each shard will act as a separate database and all the shards make up the complete logical database. By using sharding, you can meet the demands of the high throughput read/write operations as well as the very large data sets.</p>
 <p>Fortunately, MongoDB supports sharding by using a sharded cluster which is composed of three components: the query routers, the configuration servers and the shards. In the following sections, I will explain these components in more details. Sharding in MongoDB is done only on the collection level. You can also either shard one collection, multiple collections or the whole data as you choose.</p>
 <p><img alt="image" src="https://docs.mongodb.org/manual/_images/sharded-cluster.png" /></p>

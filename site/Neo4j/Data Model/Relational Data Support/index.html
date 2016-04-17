@@ -1150,10 +1150,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Neo4j/">Neo4j Content</a></p>
+<h3 id="neo4j-data-model-relational-data-support"><a href="../../Neo4j/">Neo4j</a> &gt; <a href="../Data Model.md">Data Model</a> &gt; Relational Data Support</h3>
 <hr />
-<h1 id="neo4j-data-model-relational-data-support">Neo4j &gt; Data Model &gt; Relational Data Support</h1>
 <p>In Neo4j all relationships regardless of whether they are one-to-one, one-to-many or many-to-many are represented in the same way through one relationship. Although relationships in Neo4j are directed but they can be traversed in both direction which means that you just need to create one relationship between different nodes regardless of the direction. It makes sense to create more than one relationship between two different nodes if they are of a different type or meaning since later you can use these different relationships to answer different queries. For instance, if you want to have a many-to-many relationship between products and their categories, you can just create one relationship either a relationship called PART_OF which started from the nodes with label ":Product" and ends with nodes with label ":Category". Or you create a relationship called "HAVING" which starts from the nodes with label ":Category" and ends with nodes with label ":Product". However you need to create only one relationship and not both because they have the same meaning and will answer the same queries. Assuming we choose to create the relationship called PART_OF which starts from the ":Product" nodes and ends at the ":Category" nodes. Then we can answer both below queries using this relationship:</p>
 <p>"What are all the products under category A ?"
 "What are the categories that contains product A ?"</p>

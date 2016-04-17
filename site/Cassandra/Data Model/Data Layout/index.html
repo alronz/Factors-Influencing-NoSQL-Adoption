@@ -1158,10 +1158,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Cassandra/">Cassandra Content</a></p>
+<h3 id="cassandra-data-model-data-layout"><a href="../../Cassandra/">Cassandra</a> &gt; <a href="../Data Model.md">Data Model</a> &gt; Data Layout</h3>
 <hr />
-<h1 id="cassandra-data-model-data-layout">Cassandra &gt; Data Model &gt; Data Layout</h1>
 <p>Modelling your data in Cassandra is probably one of the most difficult tasks especially if you come from a relational database background. Before talking about how you can model your data in Cassandra and what are the best principles that we need to follow to come up with an efficient data model, I will talk about very important Cassandra concepts that impact your data model design.</p>
 <h5 id="partition-key">Partition Key</h5>
 <p>In Cassandra the data is divided into different partitions and then distributed across the nodes for scalability. Each partition will have a portion of the data and will be stored as a map having different columns keys and values and this map is accessed by a row key called a partition key. Later if any node receives a read request from a client application, it will easily reroute the request to the node having this partition by simply checking which node holds this partition key. It is important that we understand how Cassandra query the data using partition key since this will impact our data model design. We define which column key will be used to be the partition key during the creation of the CQL table. You can do that by using the "PRIMARY KEY" statement. You can either use one column to create a single partition key or more than one column to create a composite partition key. An example is shown below to create a single or composite partition key:</p>

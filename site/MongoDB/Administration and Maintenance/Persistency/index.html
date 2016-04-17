@@ -1143,7 +1143,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#mongodb-administration-and-maintenance-persistency">MongoDB &gt; Administration and Maintenance &gt; Persistency</a></li>
+        <li class="main active"><a href="#mongodb-administration-and-maintenance-persistency">MongoDB  &gt; Administration and Maintenance &gt; Persistency</a></li>
         
             <li><a href="#the-wiredtiger-storage-engine">The WiredTiger storage engine</a></li>
         
@@ -1154,10 +1154,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../MongoDB/">MongoDB Content</a></p>
+<h3 id="mongodb-administration-and-maintenance-persistency"><a href="../../MongoDB/">MongoDB </a> &gt; <a href="../Administration and Maintenance.md">Administration and Maintenance</a> &gt; Persistency</h3>
 <hr />
-<h1 id="mongodb-administration-and-maintenance-persistency">MongoDB &gt; Administration and Maintenance &gt; Persistency</h1>
 <p>MongoDB supports two persistent storage engines: the WiredTiger storage engine or the MMAPv1 storage engine. Another non-persistent storage engine is also supported which is called the In-Memory storage engine where all data will be lost if the mongod instance is shut down for any reason. The in-memory storage engine is still in beta and is mainly used to get more predictable latency of database operations. Usually, persistency is supported by flushing the data from the memory to disk periodically (default is each 60 seconds). In addition, a mechanism called journalling is also used to provide more durable solution in the event of failure. MonogoDB uses journal files to store the in-memory changes and can be used later to recover the data when the server crashes before flushing data to disk files. In the following sections, I will talk about how persistency is supported in the WiredTiger and MMAPv1 storage engines.</p>
 <h4 id="the-wiredtiger-storage-engine">The WiredTiger storage engine</h4>
 <p>This is storage engine is the default engine used by MongoDB version 3.2. In this storage engine, MongoDB takes a point-on-time snapshots for the user's data each 60 seconds or when 2 GB of journal data has been written if journalling is enabled. Journalling is enabled by default and if not you can enable it by changing the "storage.journal.enabled" option to false. Then If a new checkpoint is successfully written, the old checkpoint will be freed. This means that the WiredTiger storage engine persists all the data modifications between checkpoints, however if the server exits between the checkpoints, it will use the journal files to recover the modifications since last checkpoint. </p>

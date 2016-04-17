@@ -1143,17 +1143,15 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#redis-administration-and-maintenance-upgrading">Redis &gt; Administration and Maintenance &gt; Upgrading</a></li>
+        <li class="main active"><a href="#redis-administration-and-maintenance-upgrading">Redis  &gt; Administration and Maintenance &gt; Upgrading</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Redis/">Redis Content</a></p>
+<h3 id="redis-administration-and-maintenance-upgrading"><a href="../../Redis/">Redis </a> &gt; <a href="../Administration and Maintenance.md">Administration and Maintenance</a> &gt; Upgrading</h3>
 <hr />
-<h1 id="redis-administration-and-maintenance-upgrading">Redis &gt; Administration and Maintenance &gt; Upgrading</h1>
 <p>Redis doesn't support online upgrades which means that the server must restart and the clients can't connect to it during the upgrade window. However there are some ways that you can use to support online upgrade. One way is to start a slave server and direct all the clients to it while you do an upgrade to the master. After the upgrade is finished in the master, we can stop the slave server and then redirect the clients requests again to the master server. An example is shown below:</p>
 <p>First we assume that the master server runs on the default port which 6379. Then we start another slave server with the below command:</p>
 <pre><code>SLAVEOF localhost 6379

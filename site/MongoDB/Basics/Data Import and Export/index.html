@@ -1143,7 +1143,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#mongodb-basics-data-import-and-export">MongoDB &gt; Basics &gt; Data Import and Export</a></li>
+        <li class="main active"><a href="#mongodb-basics-data-import-and-export">MongoDB  &gt; Basics &gt; Data Import and Export</a></li>
         
             <li><a href="#dbcollectionbulkwrite">db.collection.bulkWrite()</a></li>
         
@@ -1152,10 +1152,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../MongoDB/">MongoDB Content</a></p>
+<h3 id="mongodb-basics-data-import-and-export"><a href="../../MongoDB/">MongoDB </a> &gt; <a href="../Basics.md">Basics</a> &gt; Data Import and Export</h3>
 <hr />
-<h1 id="mongodb-basics-data-import-and-export">MongoDB &gt; Basics &gt; Data Import and Export</h1>
 <p>As explained in the <a href="../Query Language/">Query Language section</a>, MongoDB provides methods to update,remove,replace or insert multiple documents at the same time such as db.collection.insertMany(), db.collection.updateMany(), and db.collection.deleteMany(). In addition, MongoDB supports another method that can be used to execute a batch of write operations such as insert, update and delete at the same time. In the following section, I will explain how to do a bulk write in MongoDB.</p>
 <h4 id="dbcollectionbulkwrite">db.collection.bulkWrite()</h4>
 <p>This method provides you with a bulk write capability in a certain collection. You can use this command if you want to run multiple insert,update,replace and delete commands at the same time. These commands can be executed in order or out of order. Executing commands in order means that they will be executed sequentially and when an error occur, it will stop and no further command will be executed while executing commands out of order will just through an error and continue executing other commands. However executing commands in order is slower than out of order specially if you have multiple shards. An example is given below to show how to use this command:</p>

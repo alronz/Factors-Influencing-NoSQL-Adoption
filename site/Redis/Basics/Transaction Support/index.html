@@ -1143,17 +1143,15 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#redis-basics-transaction-support">Redis &gt; Basics &gt; Transaction Support</a></li>
+        <li class="main active"><a href="#redis-basics-transaction-support">Redis  &gt; Basics &gt; Transaction Support</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Redis/">Redis Content</a></p>
+<h3 id="redis-basics-transaction-support"><a href="../../Redis/">Redis </a> &gt; <a href="../Basics.md">Basics</a> &gt; Transaction Support</h3>
 <hr />
-<h1 id="redis-basics-transaction-support">Redis &gt; Basics &gt; Transaction Support</h1>
 <p>Redis provides a partial transactions support and can even provide almost full transactions when used with its built-in persistencey feature as will be explained <a href="../../Administration and Maintenance/Persistency/">later</a>.  </p>
 <p>Redis is a single threaded application which means that when a command is executed, it will be always the only one. So the idea behind transactions support in Redis is to wrap the transaction commands and execute them all as a single command. This is done by using MULTI/EXEC commands, you start the transaction by using MULTI command, then all the following commands will be queued. After all transaction commands are queued, they will be executed all as a single command using the EXEC command. The transaction commands will be executed sequentially and it will never happen that another command executed in the middle.</p>
 <p>The transaction commands will be either executed together or none will be executed. This  provides us with an atomic transaction. This means that if the server crashes or the connection lost during executing the commands, none will be executed. However the problem occurs when any one of the transaction commands are mistakenly executed (not syntax mistakes) due to some programming bug. In this case unfortunately Redis doesn't provide any way for a Rollback as in traditional databases. Rollback isn't supported due to reasons related to performance.  </p>

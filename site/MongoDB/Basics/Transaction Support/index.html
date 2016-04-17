@@ -1143,7 +1143,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#mongodb-basics-transaction-support">MongoDB &gt; Basics &gt; Transaction Support</a></li>
+        <li class="main active"><a href="#mongodb-basics-transaction-support">MongoDB  &gt; Basics &gt; Transaction Support</a></li>
         
             <li><a href="#transaction-using-a-single-document">Transaction using a single document</a></li>
         
@@ -1156,10 +1156,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../MongoDB/">MongoDB Content</a></p>
+<h3 id="mongodb-basics-transaction-support"><a href="../../MongoDB/">MongoDB </a> &gt; <a href="../Basics.md">Basics</a> &gt; Transaction Support</h3>
 <hr />
-<h1 id="mongodb-basics-transaction-support">MongoDB &gt; Basics &gt; Transaction Support</h1>
 <p>On the level of a single document, MongoDB guarantees that the write operation is atomic. This means that if you try to update, insert or delete a single document in MongoDB, the operation will be applied in the form of "all or nothing". However if you try to do a write operations for multiple documents, the operations will be applied atomically for each single document alone but the operations as whole may interleave and are not atomic. Hence the transaction is possible using MongoDB if you do it in a single document and not supported if you plan to do it across multiple documents.  </p>
 <p>Although MongoDB supports a way to isolate a write operation if it will be applied across multiple documents using the $isolated option as seen in the below example, this is not always enough to support transaction across multiple documents. </p>
 <pre><code>db.products.update(

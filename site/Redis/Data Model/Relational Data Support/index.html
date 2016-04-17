@@ -1143,7 +1143,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#redis-data-model-relational-data-support">Redis &gt; Data Model &gt; Relational Data Support</a></li>
+        <li class="main active"><a href="#redis-data-model-relational-data-support">Redis  &gt; Data Model &gt; Relational Data Support</a></li>
         
             <li><a href="#joins">Joins</a></li>
         
@@ -1152,10 +1152,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Redis/">Redis Content</a></p>
+<h3 id="redis-data-model-relational-data-support"><a href="../../Redis/">Redis </a> &gt; <a href="../Data Model.md">Data Model</a> &gt; Relational Data Support</h3>
 <hr />
-<h1 id="redis-data-model-relational-data-support">Redis &gt; Data Model &gt; Relational Data Support</h1>
 <p>NoSQL databases are not always the best choice when it comes to relational data. When you think of using key-value database, you are usually looking for limited use cases such as for caching, session management or to maintain a queue. The same applies for Redis, however it can still be used to store application domain data because it has a built-in persistency. Using Redis for complex relational data isn't usually recommended, however Redis supports modelling data relationships as will be explained in this section. </p>
 <p>A small example is if you want to model the customer order one-to-many relationship where each customer have many orders. You can model it in Redis by storing the customer and order details in a hash to act like a table row in RDMS. Then you can use a set to store all the order ids of a particular customer. Additionally, we can use a sorted set to store the same thing where the score can be a timestamp that will allow us later to retrieve customer orders sorted by time.  </p>
 <pre><code>// Below are few customers set inside hashes:

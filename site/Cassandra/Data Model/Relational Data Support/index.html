@@ -1150,10 +1150,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Cassandra/">Cassandra Content</a></p>
+<h3 id="cassandra-data-model-relational-data-support"><a href="../../Cassandra/">Cassandra</a> &gt; <a href="../Data Model.md">Data Model</a> &gt; Relational Data Support</h3>
 <hr />
-<h1 id="cassandra-data-model-relational-data-support">Cassandra &gt; Data Model &gt; Relational Data Support</h1>
 <p>Cassandra doesn't support joins which are used in relational databases to model relationships. Therefore, as explained in the previous section, it is absolutely ok to denormalise your data by creating more than one table for your queries and duplicate the data in each one of them. In this section, I will explain how to model relationships in Cassandra by walking through one simple example from a B2C application domain. </p>
 <p>Assuming you are having a B2C application where you want to run queries that needs to be run across different entities and through a many to many relationship. For example, we have two entities, a customer and a product and there is a many to many relationship between them. The customer can buy one or more products and the product can be bought by one or more customers. Assuming we want to run the below join queries :</p>
 <p>Q1) get all the products that were bought by a certain customer</p>

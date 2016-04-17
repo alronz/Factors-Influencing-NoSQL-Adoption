@@ -1150,10 +1150,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Neo4j/">Neo4j Content</a></p>
+<h3 id="neo4j-administration-and-maintenance-availability"><a href="../../Neo4j/">Neo4j</a> &gt; <a href="../Administration and Maintenance.md">Administration and Maintenance</a> &gt; Availability</h3>
 <hr />
-<h1 id="neo4j-administration-and-maintenance-availability">Neo4j &gt; Administration and Maintenance &gt; Availability</h1>
 <p>High availability features are supported only in the Neo4j enterprise edition which provides the ability to use a master-slave configuration architecture that can be used for availability and horizontal scaling. More than one database server slave can be configured to be the exact replica of the master database server and can be used to make the system continue working in case of hardware failure. The slaves can be also used to handle some of the read load which allows for read scaling.</p>
 <p>Using the high availability option is easy, you need just to create the database instance from the HighlyAvailableGraphDatabaseFactory and not from the GraphDatabaseFactory. This mean that there will be no need to change any of the application code if you want to switch to the high available multi machine architecture. Then when your Neo4j server is running in the HA mode, it would expected a single master and zero or more slaves. The new master-slave architecture allows for writes to be served not only from the master instance but also in any of the slaves. The slaves will synchronise the write with the master to maintain consistency. Then after the master receives the new write from the slave, it will propagate the change to all other slaves. This means that in this configuration, the write is eventually consisted and the other slaves can't see the write immediately. </p>
 <p><img alt="image" src="https://s3.amazonaws.com/3arta/ha-architecture.png" /></p>

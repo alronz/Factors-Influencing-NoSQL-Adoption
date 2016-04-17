@@ -1150,10 +1150,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Cassandra/">Cassandra Content</a></p>
+<h3 id="cassandra-administration-and-maintenance-persistency"><a href="../../Cassandra/">Cassandra</a> &gt; <a href="../Administration and Maintenance.md">Administration and Maintenance</a> &gt; Persistency</h3>
 <hr />
-<h1 id="cassandra-administration-and-maintenance-persistency">Cassandra &gt; Administration and Maintenance &gt; Persistency</h1>
 <p>Cassandra is fully durable data store since the data will be written directly to a commit log once received. The commit log is then persisted to disk and later it can be used as a crash recovery mechanism whenever the node accidentally failed. The write operation will be considered a successful only once it has been written to the commit log. After the write operation is written to the commit log, it will be written to the MemTable. The written data will be kept in the MemTable until it reaches a pre-configured size threshold. Once this threshold is reached, data will be flushed to disk or what is called the SSTable files and be persisted permanently.  </p></div>
             
         </div>

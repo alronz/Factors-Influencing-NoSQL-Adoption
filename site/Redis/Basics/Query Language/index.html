@@ -1143,7 +1143,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#redis-basics-query-language">Redis &gt; Basics &gt; Query Language</a></li>
+        <li class="main active"><a href="#redis-basics-query-language">Redis  &gt; Basics &gt; Query Language</a></li>
         
             <li><a href="#commands-on-key">Commands on Key</a></li>
         
@@ -1166,10 +1166,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Redis/">Redis Content</a></p>
+<h3 id="redis-basics-query-language"><a href="../../Redis/">Redis </a> &gt; <a href="../Basics.md">Basics</a> &gt; Query Language</h3>
 <hr />
-<h1 id="redis-basics-query-language">Redis &gt; Basics &gt; Query Language</h1>
 <p>In order to do operations on the values stored in Redis such as add, update, get or remove, a set of commands for each data type are provided. Those commands can be executed on <a href="Pipline support.md">bulk</a> and a partial <a href="../Transaction Support/">transaction</a> is supported  as will be explained later in details. Executing these commands can be done using the built-in client "redis-cli" or by using one of the supported <a href="http://redis.io/clients">clients</a> specific for many programming languages. Redis has a relatively short list of commands that can be easily learned in few hours. In the following sections I will explain the popular commands for each data type including commands on the "key". For a complete list of all the commands available in Redis, please check <a href="http://redis.io/commands">Redis documentation.</a>.</p>
 <h4 id="commands-on-key">Commands on Key</h4>
 <p>We start with the "DEL" command that can be used to delete a single or multiple keys as shown below. A key is ignored if it doesn't exist. </p>

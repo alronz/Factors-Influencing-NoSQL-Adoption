@@ -1150,10 +1150,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Cassandra/">Cassandra Content</a></p>
+<h3 id="cassandra-administration-and-maintenance-availability"><a href="../../Cassandra/">Cassandra</a> &gt; <a href="../Administration and Maintenance.md">Administration and Maintenance</a> &gt; Availability</h3>
 <hr />
-<h1 id="cassandra-administration-and-maintenance-availability">Cassandra &gt; Administration and Maintenance &gt; Availability</h1>
 <p>Cassandra is a highly available distributed system. This is because You can easily replicate your data across multiple nodes or even data centres that spans multiple locations. Replicating the data prevents downtime in case the node or the data centre experiences a catastrophic event or an unexpected failure since the data can be still served from the replica nodes. </p>
 <p>Cassandra is a decentralised system that doesn't have a single point of failure since it is a masterless system and all nodes are equally important. When we create the Keyspace, we need to decide about the replication factor and the replication strategy. The replication factor defines how many copies or replicas of our data that we want to keep. And the replication strategy defines where we are planning to replciate the data. Cassandra nodes uses a gossip protocol to know the state of all other nodes. Based on the state of the nodes, each node will decide where to forward the received read/write requests to ensure availability.  Replicating the data in more than one node will ensure reliability and fault tolerance. Once a node is down, then all read and write requests will be rerouted to the replica nodes.</p>
 <p><img alt="image" src="https://www.datastax.com/wp-content/uploads/2014/10/Cassandra_Request.jpg" /></p>

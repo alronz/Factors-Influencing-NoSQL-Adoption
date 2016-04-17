@@ -1143,7 +1143,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#redis-administration-and-maintenance-persistency">Redis &gt; Administration and Maintenance &gt; Persistency</a></li>
+        <li class="main active"><a href="#redis-administration-and-maintenance-persistency">Redis  &gt; Administration and Maintenance &gt; Persistency</a></li>
         
             <li><a href="#snapshotting-or-rdb-persistence">Snapshotting or RDB Persistence</a></li>
         
@@ -1156,10 +1156,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Redis/">Redis Content</a></p>
+<h3 id="redis-administration-and-maintenance-persistency"><a href="../../Redis/">Redis </a> &gt; <a href="../Administration and Maintenance.md">Administration and Maintenance</a> &gt; Persistency</h3>
 <hr />
-<h1 id="redis-administration-and-maintenance-persistency">Redis &gt; Administration and Maintenance &gt; Persistency</h1>
 <p>Redis supports two ways to persist data on disk. The first option is called snapshotting or RDB which takes a snapshot of the current data periodically (based on pre-configured value) and store it on disk. The second option is called append-only file or AOF which simply works by logging the operations that modifies the data (write operations) into a log file. Processing this log file later if needed will produce the same dataset that was in memory. More details about these two options and how to configure them will be explained in the following sections.</p>
 <h4 id="snapshotting-or-rdb-persistence">Snapshotting or RDB Persistence</h4>
 <p>Snapshotting is the simplest form of persistence provided by Redis. Using this option, Redis produces snapshots that contains the in memory dataset at a specific point-in-time and when certain conditions are met. For instance, you can configure Redis to produce snapshots each 20 minutes but only if there are already 50 new writes. Based on the previous example configuration, in the event of a sever crash, up to 20 minutes of writes can be lost. These snapshots will be stored in disk inside a single .rdb file. </p>

@@ -1143,19 +1143,17 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#mongodb-examples-tpc-h-queries">MongoDB &gt; Examples &gt; TPC-H Queries</a></li>
+        <li class="main active"><a href="#mongodb-examples-tpc-h-queries">MongoDB  &gt; Examples &gt; TPC-H Queries</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../MongoDB/">MongoDB Content</a></p>
+<h3 id="mongodb-examples-tpc-h-queries"><a href="../../MongoDB/">MongoDB </a> &gt; <a href="../Examples.md">Examples</a> &gt; TPC-H Queries</h3>
 <hr />
-<h1 id="mongodb-examples-tpc-h-queries">MongoDB &gt; Examples &gt; TPC-H Queries</h1>
 <p>In this example, I will show how we can model the data of a complete B2C application and how to write complex queries on this data model. I am going to use the data model used by the <a href="http://www.tpc.org/tpch">TPC-H benchmark</a> which is shown below.</p>
-<p><img alt="image" src="../tpch_schema.png" /></p>
+<p><img alt="image" src="https://s3.amazonaws.com/b2cbucket/tpch_schema.png" /></p>
 <p>The idea behind this example is to show how to use MongoDB to design a real B2C application data model and how to write advance SQL queries with joins, grouping and sorting using MongoDB query language. I have chosen three queries from the TPCH benchmark that I think will cover most of the common query capabilities of SQL. The chosen queries are Q1, Q3 and Q4 as will be explained in the following sections.</p>
 <p>The data used as input for this example is a small set from the data generated using TPCH DBGEN tool. The data is stored in CSV files that correspond to each object in the TPCH benchmark schema shown above (customer, supplier, part, lineitem, order , etc ...). For more details about how to generate the data, please have a look at <a href="http://kejser.org/tpc-h-data-and-query-generation/">this</a> blog post. </p>
 <p>The complete code of this example can be found in Github along with the steps on how to run it. You can also change the used input data by changing the content of the <a href="https://github.com/alronz/B2C-Database-Selection-Implementations/tree/master/MongoDB/TPCHQueries/src/main/java/org/mongoDB/tpcHQueries/data">input files</a> stored in the "data" folder.</p>

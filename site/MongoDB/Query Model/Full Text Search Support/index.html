@@ -1143,17 +1143,15 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#mongodb-query-model-full-text-search-support">MongoDB &gt; Query Model &gt; Full Text Search Support</a></li>
+        <li class="main active"><a href="#mongodb-query-model-full-text-search-support">MongoDB  &gt; Query Model &gt; Full Text Search Support</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../MongoDB/">MongoDB Content</a></p>
+<h3 id="mongodb-query-model-full-text-search-support"><a href="../../MongoDB/">MongoDB </a> &gt; <a href="../Query Model.md">Query Model</a> &gt; Full Text Search Support</h3>
 <hr />
-<h1 id="mongodb-query-model-full-text-search-support">MongoDB &gt; Query Model &gt; Full Text Search Support</h1>
 <p>MongoDB supports Full-Text Search using Text Indexes. Text Indexes can be defined on any string or array of strings values in your documents that you want them to be fully searched. By defining a text index on any field, MongoDB will tokenises and stems the field's text content and creates the index accordingly. </p>
 <p>To create a text index on any field, you need to specify the "text" keyword. You can create only one text index per collection. If you want to index multiple fields of a document, you can create a compound text index. </p>
 <p>As for any full text functionality, MongoDB text index assign some score to each document and then you can sort the search results by this score to show the more relevant results. You can also see the search score for each returned document by using the { $meta: "textScore" } expression.</p>

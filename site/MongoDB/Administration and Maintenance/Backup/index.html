@@ -1143,17 +1143,15 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#mongodb-administration-and-maintenance-backup">MongoDB &gt; Administration and Maintenance &gt; Backup</a></li>
+        <li class="main active"><a href="#mongodb-administration-and-maintenance-backup">MongoDB  &gt; Administration and Maintenance &gt; Backup</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../MongoDB/">MongoDB Content</a></p>
+<h3 id="mongodb-administration-and-maintenance-backup"><a href="../../MongoDB/">MongoDB </a> &gt; <a href="../Administration and Maintenance.md">Administration and Maintenance</a> &gt; Backup</h3>
 <hr />
-<h1 id="mongodb-administration-and-maintenance-backup">MongoDB &gt; Administration and Maintenance &gt; Backup</h1>
 <p>In any production environment, we should have a backup strategy to restore our data back in case of failures. MongoDB provides a tool called mongodump that can read data from the database and creates a backup BSON files. To restore the created backup files, you can use the mongorestore tool to populate the MongoDB database with the backup BSON files.</p>
 <p>After restoring the data using mongorestore, the mongod instance must rebuild all indexes. Mongodump tool can impact the mongod instance performance, so it is usually recommended to run this tool against a secondary member in a replica set. </p>
 <p>If you are using a replica set configuration, it is also possible to take a point in time backup using mongodump with the --oplog option. This means that mongodump will still be able to capture the changes to the data if the application modifies the data while backing up. To restore a point in time backup, you can use the mongorestore with the --oplogReplay option.</p>

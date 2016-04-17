@@ -1143,20 +1143,27 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#redis-basics-underline-structure">Redis &gt; Basics &gt; Underline Structure</a></li>
+        <li class="main active"><a href="#redis-basics-underline-structure">Redis  &gt; Basics &gt; Underline Structure</a></li>
         
-            <li><a href="#underline-data-structures">Underline data structures:</a></li>
+            <li><a href="#strings">Strings</a></li>
+        
+            <li><a href="#lists">Lists</a></li>
+        
+            <li><a href="#hashes">Hashes</a></li>
+        
+            <li><a href="#sets-and-sorted-sets">Sets and Sorted Sets</a></li>
+        
+            <li><a href="#bitmaps">bitmaps</a></li>
+        
+            <li><a href="#hyperloglogs">HyperLogLogs</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Redis/">Redis Content</a></p>
+<h3 id="redis-basics-underline-structure"><a href="../../Redis/">Redis </a> &gt; <a href="../Basics.md">Basics</a> &gt; Underline Structure</h3>
 <hr />
-<h1 id="redis-basics-underline-structure">Redis &gt; Basics &gt; Underline Structure</h1>
-<h3 id="underline-data-structures">Underline data structures:</h3>
 <p>Although Redis is a key-value datastore, it supports more than just the plain mapping of string keys to the string values. Instead it maps a key to different useful data structures that can be used to develop complex use cases. The key itself is binary safe which means it can be either a normal string or even a binary content of a file. However it is a good practice not to use long keys since it will impact performance and increase memory usage. In addition, keys should be consistent and can be used to define namespaces for your applications e.g school:teacher:john. In this section, I am going to give a quick overview of the supported data types that can be used in Redis to store your data.</p>
 <h4 id="strings">Strings</h4>
 <p>String is the simplest data type in Redis. It is also the most typically used data type in other key-value data stores. Inside this data type, you can store not only sting but also integers, floating point values or even a binary data such as an image or any file. However, the size of the stored value shouldn't exceed a maximum 512MB of data.</p>

@@ -1150,10 +1150,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Cassandra/">Cassandra Content</a></p>
+<h3 id="cassandra-administration-and-maintenance-backup"><a href="../../Cassandra/">Cassandra</a> &gt; <a href="../Administration and Maintenance.md">Administration and Maintenance</a> &gt; Backup</h3>
 <hr />
-<h1 id="cassandra-administration-and-maintenance-backup">Cassandra &gt; Administration and Maintenance &gt; Backup</h1>
 <p>Cassandra supports taking backups through snapshots and by enabling the incremental backup feature. The snapshot is taken for the SSTable files in a node either for a single keyspace or for all keyspaces or even for the whole cluster. Generally, a system-wide snapshot is taken then the incremental backup feature is enabled in each node to backup only the delta data that has been changed since the last snapshot. </p>
 <p>To take a snapshot on a node, we use the nodetool snapshot command as shown below:</p>
 <pre><code>nodetool -h localhost -p 7199 snapshot mykeyspace

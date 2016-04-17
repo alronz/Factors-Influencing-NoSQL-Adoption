@@ -1150,10 +1150,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Neo4j/">Neo4j Content</a></p>
+<h3 id="neo4j-data-model-referential-integrity"><a href="../../Neo4j/">Neo4j</a> &gt; <a href="../Data Model.md">Data Model</a> &gt; Referential Integrity</h3>
 <hr />
-<h1 id="neo4j-data-model-referential-integrity">Neo4j &gt; Data Model &gt; Referential Integrity</h1>
 <p>Referential integrity isn't enforced in the same way as in relational databases where if one row is deleted, all its related data is also removed. In Neo4j, if we delete a node, all its relationships will be also removed since we can't have a relationship without a start and end node attached to it. However the connected node at the end of the relationship won't be deleted. In other words, data integrity in Neo4j means that there shouldn't be any relationship without start or end node and there shouldn't be any properties that aren't attached to a node or a relationship. </p>
 <p>In addition, Neo4j enforces data integrity through the use of some constraints such as the property unique constraint that ensures the uniqueness of a certain node. For example if you want to ensure that there will be no node with label ":Product" with the same productID, then you can create a constraint as shown below:</p>
 <pre><code>CREATE CONSTRAINT ON (p:Product) ASSERT p.ID IS UNIQUE

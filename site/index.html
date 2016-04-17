@@ -1143,7 +1143,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#motivation">Motivation</a></li>
+        <li class="main active"><a href="#introduction">Introduction</a></li>
         
     
         <li class="main "><a href="#nosql-database-selection">NoSQL Database Selection</a></li>
@@ -1155,13 +1155,22 @@
         <li class="main "><a href="#query-capabilities-testing">Query Capabilities Testing</a></li>
         
     
-        <li class="main "><a href="#data-used">Data Used</a></li>
-        
-    
-        <li class="main "><a href="#results">Results</a></li>
+        <li class="main "><a href="#the-results-of-the-analysis">The Results of the Analysis</a></li>
         
     
         <li class="main "><a href="#evaluation">Evaluation</a></li>
+        
+            <li><a href="#basics-comparison">Basics Comparison</a></li>
+        
+            <li><a href="#data-model-comparison">Data Model Comparison</a></li>
+        
+            <li><a href="#query-model-comparison">Query Model Comparison</a></li>
+        
+            <li><a href="#quality-attributes-comparison">Quality Attributes Comparison</a></li>
+        
+            <li><a href="#strengths-weaknesses-comparison">Strengths &amp; Weaknesses Comparison</a></li>
+        
+            <li><a href="#factors-influencing-the-adoption-of-a-nosql-solution">Factors Influencing the Adoption of a NoSQL Solution</a></li>
         
     
         <li class="main "><a href="#references">References</a></li>
@@ -1172,41 +1181,448 @@
                 <div class="col-md-9" role="main">
 
 <p><strong>Factors Influencing the Adoption of a NoSQL Solution : A focus on the data modelling and query capabilities.</strong> </p>
-<p><em>An attempt to analysis different NoSQL databases from different NoSQL categories in order to study and test their data modelling capabilities and query expressiveness. Furthermore, many features of each database will be investigated and documented in an easy tutorial-like approach.</em> </p>
+<p><em>An attempt to analysis different NoSQL databases from different NoSQL categories in order to study their data modelling and query capabilities. In the process, many features of each database will be investigated and documented in an easy tutorial-like approach where possible. Based on the results of the analysis, the strengths and weaknesses of each database as well as the factors that influence the adoption of a NoSQL solution will be presented</em> </p>
 <hr />
-<h2 id="motivation">Motivation</h2>
-<p>content comes here.</p>
+<h2 id="introduction">Introduction</h2>
+<p>For a long time, relational databases have been the default choice for serious data storage especially for enterprise applications. Currently, many other database technologies are grabbing more attention due to their high performance, scalability and availability options such as Not Only SQL (NoSQL) technologies. Choosing the right database technology for your application among a plethora of database options is a challenging task.</p>
+<p>In this website, I aim to provide a systematic and experimental evaluation for four NoSQL databases across spectrum of different NoSQL categories. In the process, I captured various of functionalities and trade-offs each database has. Multiple aspects have been examined such as the database transaction support, query options, data layout, scalability, availability, security, and durability options. The data modelling of each database is also analyzed using a data model from the Transaction Processing Council Ad-hoc (TPC-H) benchmark [1].
+Furthermore the query capabilities of each database were evaluated using three complex queries from the same benchmark. At the end, I will present a set of factors that influence the adoption of a NoSQL solution. I hope that these factors can assist users and organisations to choose the right database technology for their specific application needs.</p>
 <h2 id="nosql-database-selection">NoSQL Database Selection</h2>
-<p>content comes here.</p>
-<h2 id="data-modelling-testing">Data Modelling Testing</h2>
-<p>content comes here.</p>
-<h2 id="query-capabilities-testing">Query Capabilities Testing</h2>
-<p>content comes here.</p>
-<h2 id="data-used">Data Used</h2>
-<p>content comes here.</p>
-<h2 id="results">Results</h2>
+<p>There are multiple approaches to classify NoSQL databases. A basic classification is based on the database data model as explained below:</p>
 <ul>
-<li>Key-Value Category<ul>
+<li>
+<p>Document-based databases : store the data as documents. Example are MongoDB, and CouchDB.</p>
+</li>
+<li>
+<p>Key-value databases : store the data in dictionary-like data structures where data is accessed by a key. Examples are Redis, Dynamo, and MemcacheDB.</p>
+</li>
+<li>
+<p>Column-based databases : store the data in tables but grouped as columns instead of rows. Examples are Cassandra, and HBase.</p>
+</li>
+<li>
+<p>Graph-based databases : store the data in a graph structure. Examples are Neo4j, and OrientDB.</p>
+</li>
+</ul>
+<p>A database from each category is chosen based on many criteria such as the database maturity, popularity, availability, performance, reliability, scalability, community strength, and open source support. </p>
+<p>The database popularity is determined based on the results of the DB-Engines Ranking which ranks databases based on different metrics such as Google trends, frequency of technical discussions, number of job offers, and relevance in social networks [2]. </p>
+<p>Another metric used is the Magic Quadrant for Operational DBMS 2015 published by Gartner Inc. which consists of series of market research that provide qualitative analysis of the operation DBMS market and its direction [3].</p>
+<p>Based on the mentioned criteria, the below NoSQL databases have been selected :</p>
+<ul>
+<li>
+<p><strong>Redis</strong>: Redis is an extremely fast NoSQL key-value in-memory database which stores data in different useful data structures such as strings, list, sets and sorted sets. Redis supports many powerful features like built-in persistency, pub/sub, transaction support with optimistic locking and Lua Scripting. It is ranked as the most popular key-value database as per the DB-Engines Ranking as per September 2015. Furthemore, it is in the leaders quadrant on the Magic Quadrant for Operational DBMS 2015.</p>
+</li>
+<li>
+<p><strong>MongoDB</strong>: MongoDB is an open source document-based database that stores the data as documents and provides more flexible data modeling. MongoDB allows for better performance, availability and scalability by using features such as sharding, replication, embedded documents, indexing, aggregation pipeline and automatic fail-over. MongoDB is the most popular database based on the DB-Engines Rankingas as per September 2015. Furthemore, it is in the leaders quadrant on the Magic Quadrant for Operational DBMS 2015.</p>
+</li>
+<li>
+<p><strong>Cassandra</strong>: Cassandra is a wide-column distributed database that can handle large amount of data and allows for high performance, scalability and availability because of its decentralised architecture. Cassandra is also the most popular column-based database based on the DB-Engines Ranking as per September 2015. Furthemore, it is in the leaders quadrant on the Magic Quadrant for Operational DBMS 2015.</p>
+</li>
+<li>
+<p><strong>Neo4j</strong>: Neo4j is an open-source graph-based database that was built completely based on the graph property model. Neo4j is compliance with the database ACID properties and supports non-functional requirements such as limited scalability, availability and fault-tolerance. It is also the most popular graph database based on DB-Engines Ranking  as per September 2015. Although it comes in the niche players quadrant on the Magic Quadrant for Operational DBMS 2015, however it is one of the few graph databases that made it to the Gartner Magic Quadrants.</p>
+</li>
+</ul>
+<h2 id="data-modelling-testing">Data Modelling Testing</h2>
+<p>The data model used to test the data modelling capabilities of each database is taken from the TPC-H benchmark as seen below. It consists of eight individual tables and some relationships between them. It is a relational database model since this benchmark is intended to evaluate the performance of relational databases. This data model is chosen because it is somehow complete and can reflect a model of a real B2C application.  Using a complete real data model can be useful to explore the data modelling capabilities of the investigated database.</p>
+<p><img alt="image" src="https://s3.amazonaws.com/b2cbucket/tpch_schema.png" /></p>
+<h2 id="query-capabilities-testing">Query Capabilities Testing</h2>
+<p>The below three SQL queries are chosen from the TPC-H benchmark to test the query capabilities for each of the investigated databases.</p>
+<ul>
+<li><strong>Pricing Summary Report Query (Q1)</strong>: This SQL query is used to report the amount of billed, shipped and returned items. This query was selected to explore how the advance aggregation, sorting and filtering is supported in the selected databases. The query is shown 
+below :</li>
+</ul>
+<pre><code class="sql">select
+   l_returnflag,
+   l_linestatus,
+   sum(l_quantity) as sum_qty,
+   sum(l_extendedprice) as sum_base_price,
+   sum(l_extendedprice*(1-l_discount)) as sum_disc_price,
+   sum(l_extendedprice*(1-l_discount)*(1+l_tax)) as sum_charge,
+   avg(l_quantity) as avg_qty,
+   avg(l_extendedprice) as avg_price,
+   avg(l_discount) as avg_disc,
+   count(*) as count_order
+from
+   lineitem
+where
+   l_shipdate &lt;= date '1998-12-01' - interval '[DELTA]' day (3)
+group by
+   l_returnflag,
+   l_linestatus
+order by
+   l_returnflag,
+   l_linestatus;
+</code></pre>
+
+<ul>
+<li><strong>Shipping Priority Query (Q3)</strong>: This query is used to get the 10 unshipped orders with the highest value. In order to do that, the query joins different three tables (customer, order and lineitem). This query is selected to investigate how querying related data is supported in the investigated databases. The query is shown below:</li>
+</ul>
+<pre><code class="sql">select
+ l_orderkey,
+ sum(l_extendedprice*(1-l_discount)) as revenue,
+ o_orderdate,
+ o_shippriority
+from
+ customer,
+ orders,
+ lineitem
+where
+ c_mktsegment = '[SEGMENT]'
+ and c_custkey = o_custkey
+ and l_orderkey = o_orderkey
+ and o_orderdate &lt; date '[DATE]'
+ and l_shipdate &gt; date '[DATE]'
+group by
+ l_orderkey,
+ o_orderdate,
+ o_shippriority
+order by
+ revenue desc,
+ o_orderdate;
+</code></pre>
+
+<ul>
+<li><strong>Order Priority Checking Query (Q4)</strong>: This query is used to see how well the order priority system is working and gives indication of the customer satisfaction. This query was selected to check how sub-queries are supported in the investigated databases. The query is shown below:</li>
+</ul>
+<pre><code class="sql">select
+ o_orderpriority,
+ count(*) as order_count
+from
+ orders
+where
+ o_orderdate &gt;= date '[DATE]'
+ and o_orderdate &lt; date '[DATE]' + interval '3' month
+ and exists (
+select
+ *
+from
+ lineitem
+where
+ l_orderkey = o_orderkey
+ and l_commitdate &lt; l_receiptdate
+)
+group by
+ o_orderpriority
+order by
+ o_orderpriority;
+</code></pre>
+
+<h2 id="the-results-of-the-analysis">The Results of the Analysis</h2>
+<p>The results of the anlaysis is documented for each database. Below the contents of this documentation is listed. To read about how the testing of the data modelling and query capabilities of each database is performed, please check the "Examples" section for each database. The code is also available in the <a href="https://github.com/alronz/NoSQL-Selection-Factors">github repository</a>. Furthermore, the strengths and weaknesses of each database are found under the "Results" section for each database. A short summary for all the analyzed features of each database is also found under the same section.</p>
+<ul>
+<li>Key-Value<ul>
 <li><a href="Redis/Redis/">Redis</a></li>
+<li><a href="Redis/Basics.md">Basics</a></li>
+<li><a href="Redis/Data Model.md">Data Model</a></li>
+<li><a href="Redis/Query Model.md">Query Model</a></li>
+<li><a href="Redis/Administration and Maintenance.md">Administration and Maintenance</a></li>
+<li><a href="Redis/Special Features.md">Special Features</a></li>
+<li><a href="Redis/Examples.md">Examples</a></li>
+<li><a href="Redis/Results.md">Results</a></li>
 </ul>
 </li>
-<li>Document-Based Category<ul>
+<li>Document-Based<ul>
 <li><a href="MongoDB/MongoDB/">MongoDB</a></li>
+<li><a href="MongoDB/Basics.md">Basics</a></li>
+<li><a href="MongoDB/Data Model.md">Data Model</a></li>
+<li><a href="MongoDB/Query Model.md">Query Model</a></li>
+<li><a href="MongoDB/Administration and Maintenance.md">Administration and Maintenance</a></li>
+<li><a href="MongoDB/Special Features.md">Special Features</a></li>
+<li><a href="MongoDB/Examples.md">Examples</a></li>
+<li><a href="MongoDB/Results.md">Results</a></li>
 </ul>
 </li>
-<li>Graph-Based Category<ul>
+<li>Graph-Based<ul>
 <li><a href="Neo4j/Neo4j/">Neo4j</a></li>
+<li><a href="Neo4j/Basics.md">Basics</a></li>
+<li><a href="Neo4j/Data Model.md">Data Model</a></li>
+<li><a href="Neo4j/Query Model.md">Query Model</a></li>
+<li><a href="Neo4j/Administration and Maintenance.md">Administration and Maintenance</a></li>
+<li><a href="Neo4j/Examples.md">Examples</a></li>
+<li><a href="Neo4j/Results.md">Results</a></li>
 </ul>
 </li>
-<li>Column-Based Category<ul>
+<li>Wide-Column<ul>
 <li><a href="Cassandra/Cassandra/">Cassandra</a></li>
+<li><a href="Cassandra/Basics.md">Basics</a></li>
+<li><a href="Cassandra/Data Model.md">Data Model</a></li>
+<li><a href="Cassandra/Query Model.md">Query Model</a></li>
+<li><a href="Cassandra/Administration and Maintenance.md">Administration and Maintenance</a></li>
+<li><a href="Cassandra/Examples.md">Examples</a></li>
+<li><a href="Cassandra/Results.md">Results</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="evaluation">Evaluation</h2>
-<p>content comes here.</p>
+<p>In the following sections, I give a comparison summary for all the main analysed features for all the four investigated databases. For more details, please have a look at the <a href="#the-results-of-the-analysis">previous section</a> where each feature for each database is explained in more detail. Furthermore, I explain the main strengths and weaknesses of the investigated databases as well as the main factors that influence the selection of a NoSQL database.</p>
+<h4 id="basics-comparison">Basics Comparison</h4>
+<p>In the table below, I provide a comparison summary for some of the main basic features of the investigated databases.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Redis</th>
+<th>MongoDB</th>
+<th>Cassandra</th>
+<th>Neo4j</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Underlying Structure</strong></td>
+<td>- Data structures such as strings,  lists, hashes, sets and sorted sets.<br> - Strings can be also integers, floating point values or even a binary data. <br></td>
+<td>- Data stored as documents in a json-like  format called BSON.<br>  - Collections are used to group documents. <br></td>
+<td>- Stored data as ordered columns  having a primary row key.<br> - Columns stored inside a CQL tables.<br> - CQL tables stored inside a keyspace.<br> - Many data types.<br></td>
+<td>- Stored data as nodes and relationships.<br> - Nodes can have labels.<br> - Relationships can have types.<br></td>
+</tr>
+<tr>
+<td><strong>Use Cases</strong></td>
+<td>- caching.<br> - message broker.<br> - chat server.<br> - session management.<br> - queues.<br> - real time analytics.<br></td>
+<td>- event logging.<br> - content management.<br> - blogging platforms.<br></td>
+<td>- scaling large time series data.<br> - storing IoT or sensor events.<br> - logging and messaging.<br></td>
+<td>- path finding problems.<br> - recommendation system.<br> - social networks.<br> - network management.<br></td>
+</tr>
+<tr>
+<td><strong>Query Language</strong></td>
+<td>- set of commands.<br></td>
+<td>- CRUD operations at collection level. <br></td>
+<td>- SQL-like query language called CQL.<br></td>
+<td>- declarative query language called Cypher.<br></td>
+</tr>
+<tr>
+<td><strong>Transaction Support</strong></td>
+<td>- yes, using MULTI/EXEC, WATCH, and UNWATCH commands.<br></td>
+<td>- transaction possible in a single document.<br> - no internal transaction support across documents. <br></td>
+<td>- lightweight transactions using Paxos protocol. <br></td>
+<td>- yes, all write operations run on a transaction. <br></td>
+</tr>
+<tr>
+<td><strong>Data Import and Export</strong></td>
+<td>- mass insertion using "redis-cli --pipe".<br></td>
+<td>- db.collection.bulkWrite() to execute a  batch of write operations.<br> - mongoexport and mongoimport tools are supported.<br></td>
+<td>- COPY commands is used to export or import data in CSV format. <br></td>
+<td>- LOAD CSV Cypher command to import/export data.<br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="data-model-comparison">Data Model Comparison</h4>
+<p>In the table below, I provide a comparison summary for some of the main features related to the data model of the investigated databases.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Redis</th>
+<th>MongoDB</th>
+<th>Cassandra</th>
+<th>Neo4j</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Layout</strong></td>
+<td>- No schema design upfront.<br> - Choose data types to represent the data.<br></td>
+<td>- Schema-less.<br> - Doesn't enforce documents structure.<br> - Data modelling is more flexible.<br> - Normalized model by using references.<br> - Denormalized model by embedding documents.<br></td>
+<td>- Data model around the query patterns.<br> - Data redundancy is acceptable.<br></td>
+<td>- Convert data into nodes and relationships to build graph model.<br> - Identify node labels and relationship types.<br> - Data stored as node properties.<br> - Relationship related data stored as relationship properties.<br></td>
+</tr>
+<tr>
+<td><strong>Relational Data Support</strong></td>
+<td>- Modelling complex data isn't recommended.<br> - Relations can be modelled using sets and sorted sets.<br></td>
+<td>- Denormalized approach for one-to-one relationship.<br> - Normalized/Denormalized approaches for one-to-many relationship depending on the document size growth.<br> - Normalized approach for many-to-many relationship.<br></td>
+<td>- no joins.<br> - relationships are modelled by creating a table for each relationship query.<br></td>
+<td>- all relationships are represented in the same way through one relationship.<br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="query-model-comparison">Query Model Comparison</h4>
+<p>In the table below, I provide a comparison summary for some of the main features related to the query model of the investigated databases.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Redis</th>
+<th>MongoDB</th>
+<th>Cassandra</th>
+<th>Neo4j</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Query</strong></td>
+<td>- Parameterised queries using the key.<br> - Range queries using sorted Sets.<br></td>
+<td>- The find() command with selection and projection statements.<br> - Parameterized and range queries support with many query selectors.<br> - Query array content using $elemMatch.<br> - Query embedded documents using dot notations.<br></td>
+<td>- Using CQL SELECT statement.<br> - Parameterized/Range queries require indexes.<br></td>
+<td>- Using the Cypher MATCH clause.<br> - Write complex queries easily.<br> - Efficient graph traversing.<br></td>
+</tr>
+<tr>
+<td><strong>Text Search Support</strong></td>
+<td>- No full-text support.<br> - some commands uses regular expressions.<br></td>
+<td>- Full-text search supported using the Text Index.<br> - Regex supported using the $regex keyword.<br></td>
+<td>- No full-text search support.<br> - No regex support.<br></td>
+<td>- No full-text search support.<br> - Java regex support.<br></td>
+</tr>
+<tr>
+<td><strong>Aggregation</strong></td>
+<td>- No aggregation support.<br></td>
+<td>- Aggregation supported using the aggregation pipeline framework or a map reduce.<br></td>
+<td>- Aggregation functions supported.<br> - Aggregation at the partition level.<br></td>
+<td>- Aggregation supported.<br> - Many aggregation functions.<br></td>
+</tr>
+<tr>
+<td><strong>Indexing</strong></td>
+<td>- The key is the primary index.<br> - No secondary indexes support.<br></td>
+<td>- Many index types are supported.<br>  - Defined on the collection level.<br></td>
+<td>- Secondary index supported.<br></td>
+<td>- Secondary index support.<br></td>
+</tr>
+<tr>
+<td><strong>Sorting</strong></td>
+<td>- A Sort command is supported.<br></td>
+<td>- A sort method is supported.<br></td>
+<td>- Sorting supported using the clustering columns.<br> - clustering columns defined during the table creation.<br> - Using CQL ORDER BY clause with the ASC or DESC options.<br></td>
+<td>- ORDER BY clause to sort the results.<br></td>
+</tr>
+<tr>
+<td><strong>Filtering</strong></td>
+<td>- Sets can be used to filter data using set commands such as intersect, union, and difference.<br></td>
+<td>- Filtering using a query statement within the Find() method.<br></td>
+<td>- CQL WHERE clause to filter data.<br> - Only primary key, indexed columns can be filtered.<br></td>
+<td>- Using the MATCH and WHERE clauses.<br> - Based on a match pattern.<br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="quality-attributes-comparison">Quality Attributes Comparison</h4>
+<p>In the table below, I provide a comparison summary for all the main features related to some of the quality attributes of the investigated databases.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Redis</th>
+<th>MongoDB</th>
+<th>Cassandra</th>
+<th>Neo4j</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>- Scaling reads using replications.<br>  - Scaling writes using sharding.<br>  - Auto-sharding and balancing using Redis cluster.<br>  - Scaling configuration using Redis Sentinel. <br></td>
+<td>- Scaling using the Sharded Cluster. <br> - Auto-sharding and balancing.<br></td>
+<td>- All nodes accept read/write requests.<br>  - Scaling by adding and removing nodes.<br>  - Auto-partitioning based on partition key. <br></td>
+<td>- Scale reads using the HA master-slave clusters.<br>  - Only vertical scaling the write load.<br>  - No support for sharding.<br></td>
+</tr>
+<tr>
+<td><strong>Persistency</strong></td>
+<td>- Using Snapshoting and AOF.<br>  - The fsync options determine the durability levels. <br></td>
+<td>- Two persistent storage engines.<br>   - Journalling for more durable solution in the event of failure. <br></td>
+<td>- Fully durable. <br> - Data is written directly to a commit log. <br></td>
+<td>- Fully durable.<br>  - Once transactions is committed, it will be written directly to disk.<br></td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>- No access control.<br>  - BIND command to allow specific IP to access the server.<br>  - Supports authentication mechanism. <br> - No support for encryption mechanism.  <br> - "rename-command” used to rename the original commands. <br></td>
+<td>- Authentication and role-based access control. <br>  - Communication encryption using TLS/SSL protocols <br></td>
+<td>- SSL encryption. <br> - Authentication based control.<br>  - SQL-similar statements.<br>  - Granting or revoking permissions from users on specific objects. <br></td>
+<td>- Basic security support. <br> - Authentication mechanism. <br></td>
+</tr>
+<tr>
+<td><strong>Availability</strong></td>
+<td>- Redis Sentinel to guarantee high availability. <br> - Automatic failover. <br></td>
+<td>- Replication using the Replica Set. <br> - Automatic failover supported. <br></td>
+<td>- Highly available distributed system. <br> - Replication support. <br> - Decentralised system, no single point of failure. <br> - All nodes are equally important. <br></td>
+<td>- Using the master-slave HA cluster.<br>  - Replication support.<br>  - Automatic failover.<br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="strengths-weaknesses-comparison">Strengths &amp; Weaknesses Comparison</h4>
+<p>In this section, I give a brief summary for the main strengths and weaknesses for each of the investigated databases.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Strengths</th>
+<th>Weaknesses</th>
+<th>Suitable for Applications</th>
+<th>Not Suitable for Applications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Redis</strong></td>
+<td>- More complex data type support.<br>  - High availability solution support.<br>   - On-Disk persistence.<br>  - Scalability options.<br>  - Transaction support.<br>   - Better performance.<br></td>
+<td>- Difficult to model relational data.<br>   - Dataset is limited by the memory size.<br>   - Query and aggregation limitations.<br>   - No support for secondary indexes.<br>   - Basic security options.<br></td>
+<td>- With foreseeable dataset size.<br>  -  With high performance requirement.<br></td>
+<td>- With deeply connected data.<br>  - With rich queries requirements.<br>  - With large dataset (costly).<br></td>
+</tr>
+<tr>
+<td><strong>MongoDB</strong></td>
+<td>- Rich query capabilities.<br>   - Flexible document data model.<br>   - Auto-sharding and balancing.<br>   - Replication and auto failover.<br></td>
+<td>- Data should fit the document data model.<br>   - Aggregation and queries are executed at the collection level.<br>  - No transaction support.<br></td>
+<td>- With data that fits the document data model.<br></td>
+<td>- With deeply connected data.<br>  - With transaction requirements.<br></td>
+</tr>
+<tr>
+<td><strong>Cassandra</strong></td>
+<td>- Elastic scalability.<br>  - The Distributed architecture.<br>   - Fault tolerance, availability support.<br>  - Simple query language.<br>  - High performance.<br></td>
+<td>- Query, sorting and aggregation limitations.<br>  - Data modelling challenges.<br></td>
+<td>- With large dataset.<br>  -  With high performance, scalability, and availability requirements.<br></td>
+<td>- With rich query requirements.<br>  - With small dataset.<br>  - With strong consistency requirements.<br></td>
+</tr>
+<tr>
+<td><strong>Neo4j</strong></td>
+<td>- Powerful query model.<br>   - The graph model flexibility.<br>   - Easy to learn declarative query language.<br>   - ACID compliant and full transaction support.<br></td>
+<td>- Scalability limitations.<br>  - Date support limitation.<br></td>
+<td>- With deeply connected data.<br>  - With complex queries requirements.<br>  - With data having a graph nature.<br></td>
+<td>- With simple data model.<br>  - With elastic write scalability requirements.<br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="factors-influencing-the-adoption-of-a-nosql-solution">Factors Influencing the Adoption of a NoSQL Solution</h4>
+<p>Based on the analysis of the four NoSQL databases, the following factors have been found that affect the decision of adopting a NoSQL solution:</p>
+<h5 id="data-related-factors">Data Related Factors</h5>
+<p>NoSQL databases are designed to support a variety of data models. Therefore, it is imperative to first analysis the application’s data nature before migrating to a NoSQL solution. Some data features that should be investigated are the schema flexibility, data size, data complexity, relational data support and data access patterns. For instance, the data complexity and relational data support of the investigated databases are shown below. For example, if the data is deeply connected, then Neo4j might be the right choice. For more information about the data modeling capabilities for each of the investigated databases, see section <a href="#data-model-comparison">Data Model Comparison</a>.</p>
+<p><img alt="image" src="https://s3.amazonaws.com/b2cbucket/queryVsDataModel.png" /></p>
+<h5 id="query-related-factors">Query Related Factors</h5>
+<p>These factors are related to the query capabilities required for the application. Based
+on the query requirements, it would be possible to choose a NoSQL solution that
+meets these requirements. Examples of the requirements are if the application requires
+full-text search, regular expressions, indexes, aggregation, filtering, range queries,
+Ad-Hoc queries, and joins support. For more details about the query options for each
+database, see <a href="./query-model-comparison">Query Model Comparison</a>.</p>
+<h5 id="non-functional-related-factors">Non-Functional Related Factors</h5>
+<p>Most of the factors influencing the adoption of a NoSQL database are related to the
+non-functional requirements of the application. Below are the main non-functional
+properties of a database system:</p>
+<ul>
+<li><strong>Performance</strong>: The performance is one of the most important concerns to adopt a NoSQL solution, unfortunately, it wasn't analysed here.</li>
+</ul>
+<p>- <strong>Scalability</strong>: This includes concerns such as whether the database supports horizontal
+scaling, auto-sharding and load balancing. A summary of the scalability options for the selected databases is explained in <a href="#quality-attributes-comparison">Quality Attributes Comparison</a>.</p>
+<p>- <strong>Availability</strong>: Check whether the database guarantees the availability requirement using techniques such as replication, auto-failover, and backups. A summary of the availability options for the selected databases is illustrated in <a href="#quality-attributes-comparison">Quality Attributes Comparison</a>.</p>
+<p>- <strong>Durability</strong>: Check what are the durability options available for the database. A summary of the durability options for the selected databases is described in <a href="#quality-attributes-comparison">Quality Attributes Comparison</a>.</p>
+<p>- <strong>Transaction Support</strong>: If the application requires to run ACID transactions or not. A summary for the transaction support for the selected databases is defined
+in <a href="#basics-comparison">Basics Comparison</a>.</p>
+<p>- <strong>Security</strong>: Which security measures are required for the application. This includes security techniques such as communications encryption, authentication, and access control mechanisms. A summary for the security option for the selected databases is demonstrated in <a href="#quality-attributes-comparison">Quality Attributes Comparison</a>.</p>
+<p>- <strong>Database overall simplicity</strong>: This includes concerns related to how easy it is to adapt and learn the new database solution. Examples are the simplicity of installation, upgrade, configuration, backup, and drivers support. Most of these concerns are summarized in <a href="#quality-attributes-comparison">Quality Attributes Comparison</a>, and <a href="#basics-comparison">Basics Comparison</a>.</p>
+<p>- <strong>Other factors</strong>: Examples are the database licence type, community and documentation strength, database maturity, and popularity. These factors are important but are out of the scope of this research.</p>
 <h2 id="references">References</h2>
-<p>content comes here.</p></div>
+<p>[1]: TPC. TPC-H is an ad-hoc, decision support benchmark. url: http://www.tpc.org/ tpch/ (visited on 03/2016).</p>
+<p>[2]: DB-Engines. DB-Engines Ranking. url: http://db-engines.com/en/ranking (visited on 03/2016).</p>
+<p>[3]: Gartner. InterSystems Recognized as a Leader in Gartner Magic Quadrant for Operational DBMS. url: http://www.intersystems.com/our-products/cache/intersystems-recognized-leader-gartner-magic-quadrant-operational-dbms (visited on 03/2016).</p>
+<p>[4]: RedisLabs. Redis. url: http://redis.io/documentation (visited on 03/2016).</p>
+<p>[5]: J. L. Carlson. Redis in Action. Manning, 2013.</p>
+<p>[6]: K. Banker. MongoDB in Action. Manning, 2012.</p>
+<p>[7]: R. Bradberry and E. Lubow. Practical Cassandra: A Developer’s Approach. Addison-
+Wesley, 2013.</p>
+<p>[8]: EndPoint. “Benchmarking Top NoSQL Databases.” In: (2015). doi: http://
+www.datastax.com/wp-content/themes/datastax-2014-08/files/NoSQL_
+Benchmarks_EndPoint.pdf.</p>
+<p>[9]: T. A. Foundation.Welcome to apache cassandra. url: http://cassandra.apache.org/ (visited on 03/2016).</p>
+<p>[10]: M. Inc. Mongodb 3.2 manual. url: http://docs.mongodb.org/manual (visited
+on 03/2016).</p>
+<p>[11]: Neo4j. Graph DB vs Rdbms. url: http://neo4j.com/developer/graph-db-vsrdbms/
+(visited on 03/2016).</p>
+<p>[12]: N. Technology. Neo4j Documentation. url: http://neo4j.com/docs/ (visited on
+03/2016).</p></div>
             
         </div>
 
@@ -1255,5 +1671,5 @@
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2016-04-09 20:48:27.020542
+Build Date UTC : 2016-04-17 10:42:34.679976
 -->

@@ -1150,10 +1150,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Redis/">Redis Content</a></p>
+<h3 id="redis-special-features-scripting-support"><a href="../../Redis/">Redis</a> &gt; <a href="../Special Features.md">Special Features</a> &gt; Scripting Support</h3>
 <hr />
-<h1 id="redis-special-features-scripting-support">Redis &gt; Special Features &gt; Scripting Support</h1>
 <p>Redis allows you to execute Lua scripts inside the Redis server. Scripting Redis with Lua is useful and can be used to avoid some common pitfalls that slow down development or reduce performance. To load the script to Redis server you can use either EVAL or EVALSHA commands which will evaluate the scripts using the Lua interpreter and load it. By using EVAL you can simply load a Lua program without defining a Lue function and pass arguements to the Lua program as redis keys. Example is given below :</p>
 <pre><code>&gt; eval &quot;return {KEYS[1],KEYS[2],ARGV[1],ARGV[2]}&quot; 2 key1 key2 first second
 1) &quot;key1&quot;

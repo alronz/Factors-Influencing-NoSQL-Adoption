@@ -1143,17 +1143,15 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#redis-examples-cache-service">Redis &gt; Examples &gt; Cache Service</a></li>
+        <li class="main active"><a href="#redis-examples-cache-service">Redis  &gt; Examples &gt; Cache Service</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Redis/">Redis Content</a></p>
+<h3 id="redis-examples-cache-service"><a href="../../Redis/">Redis </a> &gt; <a href="../Examples.md">Examples</a> &gt; Cache Service</h3>
 <hr />
-<h1 id="redis-examples-cache-service">Redis &gt; Examples &gt; Cache Service</h1>
 <p>For many websites nowadays, large part of the pages are rarely changing. To improve the performance, a caching mechanism needs to be used when generating web pages in the server side. As a very fast in-memory database, Redis can be easily used to act like a cache service. There are many production-ready cache implementations available which were build using Redis. Redis can be configured as a cache and to support directly out-of-box popular cache eviction algorithms such as LRU and others. However in this example we are showing how to build the basic functionalities of a cache service using Redis. This service will support the below rest API:</p>
 <p><img alt="image" src="https://s3.amazonaws.com/b2cbucket/CacheManagement.png" /></p>
 <p>Using this API you can check if the page has been already cached (a cache hit) and return the cached content. Otherwise in case of a cache miss, we cache the page content for the upcoming requests. The implementation of this API is shown below:</p>

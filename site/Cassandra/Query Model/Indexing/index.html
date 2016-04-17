@@ -1150,10 +1150,8 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Cassandra/">Cassandra Content</a></p>
+<h3 id="cassandra-query-model-indexing"><a href="../../Cassandra/">Cassandra</a> &gt; <a href="../Query Model.md">Query Model</a> &gt; Indexing</h3>
 <hr />
-<h1 id="cassandra-query-model-indexing">Cassandra &gt; Query Model &gt; Indexing</h1>
 <p>Cassandra supports secondary indexes that are used to access the data using columns other than the primary key columns.  The indexes are built in the background by Cassandra without blocking writes or reads. The indexes provide efficient and fast lookup based on matching conditions for any secondary columns. </p>
 <p>Usually it is a good practice to create indexes on columns that aren't having high-cardinality (having many distinct or unique values). Creating indexes on high-cardinality will introduce many seeks for few results and it is not recommended. For example, it is better to create an index on the products release_year column instead of the product id since the product id has high-cardinality while the release_year has medium-cardinality and can group multiple results. In addition, creating an index on too low-cardinality columns aren't recommended since they don't make much sense. For example, if you create an index on a boolean data type that has only true or false values, then this will result on two huge rows having all the data. Therefore, it is recommended to use columns that doesn't have too high-cardinality or too low-cardinality but are having medium cardinality.</p>
 <p>The other guidance principle that we should consider when creating indexes is to avoid creating indexes on columns that have frequent delete operations. The reason for that is that Cassandra stores up to 100K tombstones in the index, then the queries on the indexed columns will fail.</p>

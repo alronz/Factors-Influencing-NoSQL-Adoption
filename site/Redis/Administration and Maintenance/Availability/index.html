@@ -1143,17 +1143,15 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#redis-administration-and-maintenance-availability">Redis &gt; Administration and Maintenance &gt; Availability</a></li>
+        <li class="main active"><a href="#redis-administration-and-maintenance-availability">Redis  &gt; Administration and Maintenance &gt; Availability</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Redis/">Redis Content</a></p>
+<h3 id="redis-administration-and-maintenance-availability"><a href="../../Redis/">Redis </a> &gt; <a href="../Administration and Maintenance.md">Administration and Maintenance</a> &gt; Availability</h3>
 <hr />
-<h1 id="redis-administration-and-maintenance-availability">Redis &gt; Administration and Maintenance &gt; Availability</h1>
 <p>Redis provides a distributed system called Redis Sentinel to guarantee high availability. Redis Sentinel can resist certain types of failures automatically without any human intervention. Redis Sentinel can be used also for other tasks such as monitoring, as a configuration provider for clients and as a notification system. By Monitoring we mean that Redis Sentinel will monitor your master and slave instances and check if they are working as expected. It will also send notifications to the admin in case anything went wrong. Clients can also contact the Redis Sentinel to get any configurations parameters for a certain Redis instance such as address and port. Finally Redis Sentinel will start a failover process in case the master is not working to promote one of the slaves to replace it and reconfigure the other slaves to contact this new master.</p>
 <p>An important note is that in order to get the best robustness out of Redis Sentinel, you should configure it in such a way that it will not be a single point of failure. This means that you use multiple instances in separate machines or virtual machines that fail independently which can cooperate together to handle Redis failure detection and recovery.  You need at least three Redis Sentinel instance to guarantee its Robustness. </p>
 <p>Running Redis Sentinel is easy and can be done using the below command:</p>

@@ -1143,17 +1143,15 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#redis-basics-data-import-and-export">Redis &gt; Basics &gt; Data Import and Export</a></li>
+        <li class="main active"><a href="#redis-basics-data-import-and-export">Redis  &gt; Basics &gt; Data Import and Export</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
-<p><a href="../../Redis/">Redis Content</a></p>
+<h3 id="redis-basics-data-import-and-export"><a href="../../Redis/">Redis </a> &gt; <a href="../Basics.md">Basics</a> &gt; Data Import and Export</h3>
 <hr />
-<h1 id="redis-basics-data-import-and-export">Redis &gt; Basics &gt; Data Import and Export</h1>
 <p>Sometimes we want to migrate our old data or insert a large amount of preexistence data into our Redis server. Inserting a millions of keys of data to Redis at short amount of time and without blocking the server operations is very important feature. Luckily Redis supports a pipe mode that was designed in order to perform mass insertion. Using this utility is so simple, you just need to put all the data you want to insert in a file and then performs the below command:</p>
 <pre><code>cat data.txt | redis-cli --pipe
 </code></pre>

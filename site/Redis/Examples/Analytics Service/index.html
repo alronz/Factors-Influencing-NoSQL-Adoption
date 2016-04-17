@@ -1143,17 +1143,16 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#redis-examples-analytics-service">Redis &gt; Examples &gt; Analytics Service</a></li>
+        <li class="main active"><a href="#redis-examples-analytics-service">Redis  &gt; Examples &gt; Analytics Service</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="../../..">Home</a></p>
 <p><a href="../../Redis/">Redis Content</a></p>
+<h3 id="redis-examples-analytics-service"><a href="../../Redis/">Redis </a> &gt; <a href="../Examples.md">Examples</a> &gt; Analytics Service</h3>
 <hr />
-<h1 id="redis-examples-analytics-service">Redis &gt; Examples &gt; Analytics Service</h1>
 <p>Redis is suitable to get real-time analytics since it can answer queries very fast. In a B2C application, it is possible to use Redis to answer queries such as what are the most viewed products, how many users currently logged in, what are the last viewed products, and what are the most  added to cart or deleted from cart products. Of course, we can answer such queries using any other database. However, Redis is much faster since it is in-memory database and can delete the data used for the queries automatically after sometime when it is not needed. For example, if you want to store the most viewed 100 products, you can use the sorted set to store only the 100 most viewed products as will be shown in this section. So Redis is more efficient in terms of performance and storage when it comes to analytics assuming you want to answer simple direct questions.</p>
 <p>To show how to use Redis to answer analytical queries, a service has been build that will cover the below APIs:</p>
 <p><img alt="image" src="https://s3.amazonaws.com/b2cbucket/analytics.png" /></p>
